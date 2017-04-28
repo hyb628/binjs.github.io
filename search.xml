@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[ES6的Array.from、Set数组去重]]></title>
+      <url>%2F2017%2F04%2F27%2FES6%E7%9A%84Array.from%E3%80%81Set%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%2F</url>
+      <content type="text"><![CDATA[Set数据结构ES6中新增了Set数据结构，类似于数组，但是 它的成员都是唯一的 ，其构造函数可以接受一个数组作为参数，如： 1234let array = [1, 1, 1, 1, 2, 3, 4, 4, 5, 3];let set = new Set(array);console.log(set);// =&gt; Set &#123;1, 2, 3, 4, 5&#125; Array.fromES6中Array新增了一个静态方法Array.from，可以把类似数组的对象转换为数组，如通过querySelectAll方法得到HTML DOM Node List，以及ES6中新增的Set和Map等可遍历对象，如： 1234let set = new Set();set.add(1).add(2).add(3);let array = Array.from(set);console.log(array); // [1, 2, 3] 于是，现在我们可以用一行代码实现数组去重了：于是，现在我们可以用一行代码实现数组去重了: 12let array = Array.from(new Set([1, 1, 1, 2, 3, 2, 4]));console.log(array); //[1, 2, 3, 4]]]></content>
+    </entry>
+
+    
+  
+  
+</search>
