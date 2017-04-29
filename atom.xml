@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://binjs.com/"/>
+  <link href="https://hyb628.github.io/"/>
   <updated>2017-04-28T06:33:27.000Z</updated>
-  <id>http://binjs.com/</id>
+  <id>https://hyb628.github.io/</id>
   
   <author>
     <name>一喵呜</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>ES6的Array.from、Set数组去重</title>
-    <link href="http://binjs.com/2017/04/27/ES6%E7%9A%84Array.from%E3%80%81Set%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
-    <id>http://binjs.com/2017/04/27/ES6的Array.from、Set数组去重/</id>
+    <link href="https://hyb628.github.io/2017/04/27/ES6%E7%9A%84Array.from%E3%80%81Set%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
+    <id>https://hyb628.github.io/2017/04/27/ES6的Array.from、Set数组去重/</id>
     <published>2017-04-27T02:13:55.000Z</published>
     <updated>2017-04-28T06:33:27.000Z</updated>
     
