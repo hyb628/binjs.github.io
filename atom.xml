@@ -92,9 +92,9 @@
     
       <category term="ES6" scheme="https://hyb628.github.io/tags/ES6/"/>
     
-      <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
-    
       <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
+    
+      <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
     
   </entry>
   
@@ -179,9 +179,9 @@
       <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="CSS" scheme="https://hyb628.github.io/tags/CSS/"/>
-    
       <category term="SASS" scheme="https://hyb628.github.io/tags/SASS/"/>
+    
+      <category term="CSS" scheme="https://hyb628.github.io/tags/CSS/"/>
     
   </entry>
   
@@ -381,9 +381,9 @@
       <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="BFC" scheme="https://hyb628.github.io/tags/BFC/"/>
-    
       <category term="CSS" scheme="https://hyb628.github.io/tags/CSS/"/>
+    
+      <category term="BFC" scheme="https://hyb628.github.io/tags/BFC/"/>
     
   </entry>
   
@@ -433,9 +433,160 @@
     
       <category term="JavaScript" scheme="https://hyb628.github.io/tags/JavaScript/"/>
     
+      <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
+    
       <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
     
+  </entry>
+  
+  <entry>
+    <title>React学习笔记1</title>
+    <link href="https://hyb628.github.io/2016/05/27/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
+    <id>https://hyb628.github.io/2016/05/27/React学习笔记1/</id>
+    <published>2016-05-27T12:35:24.000Z</published>
+    <updated>2017-04-29T12:54:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>打算对React的学习过程 分阶段性的学习和总结吧，先把这周主要看的学的知识点做个记录，后期慢慢学到新的东西慢慢整理起来。刚开始比较生疏，难免有问题。</p>
+</blockquote>
+<h4 id="ReactDOM-render"><a href="#ReactDOM-render" class="headerlink" title="ReactDOM.render"></a>ReactDOM.render</h4><p><code>ReactDOM.render</code> 里面 逗号分隔 最后面不要不要标点符号 ,<code>ReactDOM.render</code> 是 React 的最基本方法，用于将模板转为 HTML 语言，并插入指定的 DOM 节点.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(element, container, callback) // 回调函数，可选。传入该值时，会在组件渲染完或更新完成后调用</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(</div><div class="line">  &lt;h1&gt;huangyb&lt;/h1&gt;,</div><div class="line">  document.getElementById(&apos;example&apos;)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h4 id="chrome-扩展程序"><a href="#chrome-扩展程序" class="headerlink" title="chrome 扩展程序"></a>chrome 扩展程序</h4><ul>
+<li><a href="http://dwz.cn/3svSWa" target="_blank" rel="external">扩展程序React Developer Tools</a></li>
+<li><a href="http://dwz.cn/3svU59" target="_blank" rel="external">react-detector</a></li>
+</ul>
+<h4 id="React版本说明"><a href="#React版本说明" class="headerlink" title="React版本说明"></a>React版本说明</h4><p>写react 需要引入三个JS文件 <code>react.js</code> 、  <code>eacr-dom.js</code> 、  <code>browser.min.js</code>  （0.14版本之前合并为一个文件，0.14版本以上就拆分为三个文件）</p>
+<blockquote>
+<p>React CDN:</p>
+<ul>
+<li><a href="http://cdn.bootcss.com/react/15.1.0/react.min.js" target="_blank" rel="external">http://cdn.bootcss.com/react/15.1.0/react.min.js</a></li>
+<li><a href="http://cdn.bootcss.com/react/15.1.0/react-dom.js" target="_blank" rel="external">http://cdn.bootcss.com/react/15.1.0/react-dom.js</a></li>
+<li><a href="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js" target="_blank" rel="external">https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js</a></li>
+</ul>
+</blockquote>
+<p>页面中用 <code>&lt;script type=&quot;text/babel&quot;&gt;</code>标记来使用 JSX 转换器.在以前旧版本的只有一个<code>react.js</code> 文件 所以假如 <code>React.render</code> 相当于现在新版本的 <code>ReactDOM.render</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(&lt;div&gt;&#123;name&#125;&lt;/div&gt; ,document.getElementById(&apos;id&apos;))</div></pre></td></tr></table></figure>
+<p>需要有个Root父级元素包裹，不能插入的数据是多个同级，不然会报错。</p>
+<h4 id="render的两种方式"><a href="#render的两种方式" class="headerlink" title="render的两种方式"></a>render的两种方式</h4><ul>
+<li>JSX 的基本语法规则：遇到 HTML 标签（以 <code>&lt;</code> 开头），就用 HTML 规则解析；遇到代码块（以 <code>{</code> 开头），就用 JavaScript 规则解析。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var name2 = [&apos;y1&apos;,&apos;y2&apos;,&apos;y3&apos;];</div><div class="line">ReactDOM.render( </div><div class="line">	&lt;div&gt; &#123; name2.map(function (key) &#123; return &lt;li&gt;&#123;key&#125;&lt;/li&gt; &#125;) &#125; &lt;/div&gt;, </div><div class="line">	document.getElementById(&apos;name22&apos;) </div><div class="line">)</div></pre></td></tr></table></figure>
+<ul>
+<li>JSX 允许直接在模板插入 JavaScript 变量。如果这个变量是一个数组，则会展开这个数组的所有成员</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var arr = [</div><div class="line">   &lt;h1&gt;Hello world!&lt;/h1&gt;,</div><div class="line">   &lt;h2&gt;React is awesome&lt;/h2&gt;</div><div class="line">];</div><div class="line">ReactDOM.render(</div><div class="line">   &lt;div&gt;&#123;arr&#125;&lt;/div&gt;,</div><div class="line">   document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>JSX = JavaScriptXML</p>
+</blockquote>
+<h4 id="React-createClass"><a href="#React-createClass" class="headerlink" title="React.createClass"></a>React.createClass</h4><p>React 允许将代码封装成组件（component），然后像插入普通 HTML 标签一样，在网页中插入这个组件。<code>React.createClass</code> 方法就用于生成一个组件类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;con&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script type=&quot;text/babel&quot;&gt;</div><div class="line">  var HelloMess = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        return &lt;p className=&quot;pp&quot;&gt;huangyb &#123;this.props.yb&#125;&lt;/p&gt;</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  ReactDOM.render(</div><div class="line">      &lt;HelloMess yb=&quot;你好&quot;&gt;&lt;/HelloMess&gt;,</div><div class="line">      document.getElementById(&apos;con&apos;),function () &#123;</div><div class="line">          console.log(&apos;render完成&apos;);</div><div class="line">      &#125;</div><div class="line">  )</div></pre></td></tr></table></figure>
+<h4 id="HTML-标签-vs-React-组件"><a href="#HTML-标签-vs-React-组件" class="headerlink" title="HTML 标签 vs. React 组件"></a>HTML 标签 vs. React 组件</h4><ul>
+<li>React.render方法可以渲染HTML结构，也可以渲染React组件。渲染HTML标签，声明变量采用首字母小写</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var myDivElement = &lt;div className=&quot;foo&quot; /&gt;;</div><div class="line">React.render(myDivElement, document.body);</div></pre></td></tr></table></figure>
+<ul>
+<li>渲染React组件，声明变量采用首字母大写</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var MyComponent = React.createClass(&#123;/*...*/&#125;);</div><div class="line">var myElement = &lt;MyComponent someProperty=&#123;true&#125; /&gt;;</div><div class="line">React.render(myElement, document.body);</div></pre></td></tr></table></figure>
+<h4 id="HTML转义"><a href="#HTML转义" class="headerlink" title="HTML转义"></a>HTML转义</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var htmlEle = &quot;&lt;strong&gt;htmlEle&lt;/strong&gt;&quot;;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">    &lt;HybNode&gt;</div><div class="line">        &lt;div&gt;HTML转义情况::&#123;htmlEle&#125;&lt;/div&gt;</div><div class="line">        &lt;div dangerouslySetInnerHTML=&#123;&#123;__html: htmlEle&#125;&#125; data-hyb=&quot;xxx&quot; aria-ybs=&quot;true&quot;/&gt;</div><div class="line">    &lt;/HybNode&gt;,</div><div class="line">    document.getElementById(&apos;example3&apos;)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h4 id="className-和-htmFor-的使用"><a href="#className-和-htmFor-的使用" class="headerlink" title="className 和 htmFor 的使用"></a>className 和 htmFor 的使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#使用JSX</div><div class="line">ReactDOM.render(</div><div class="line">        &lt;label className=&quot;xxx&quot; htmlFor=&quot;input&quot;&gt;content&lt;/label&gt;,</div><div class="line">        document.getElementById(&apos;example&apos;)</div><div class="line">);</div><div class="line"></div><div class="line">#不使用JSX</div><div class="line">ReactDOM.render(</div><div class="line">        React.createElement(&apos;label&apos;, &#123;className: &apos;xxx&apos;, htmlFor: &apos;input&apos;&#125;, &apos;content&apos;),</div><div class="line">        document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
+<h4 id="js表达式"><a href="#js表达式" class="headerlink" title="js表达式"></a>js表达式</h4><ul>
+<li>表达式用{}包起来，不要加引号，加引号就会被当成字符串。</li>
+<li>JSX是HTML和JavaScript混写的语法，当遇到&lt;，JSX就当HTML解析，遇到{就当JavaScript解析。</li>
+</ul>
+<p>属性表达式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render( </div><div class="line"> &lt;div className=&#123;2 &gt; 1 ? &apos;class-a&apos; : &apos;class-b&apos;&#125;&gt;content&lt;/div&gt;, </div><div class="line"> document.body </div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>子表达式:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var Nav = React.createClass(&#123;</div><div class="line">   render: function () &#123;</div><div class="line">   return &lt;div&gt;nav&lt;/div&gt;</div><div class="line"> &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">   &lt;div&gt;</div><div class="line">     &#123;2 &gt; 1 ? &lt;Nav/&gt; : &lt;div&gt;div&lt;/div&gt;&#125;</div><div class="line">   &lt;/div&gt;,</div><div class="line">   document.body</div><div class="line">);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注释, 同JS注释一样： 单行： <code>//</code>    多行： <code>/**/</code></p>
+</blockquote>
+<h4 id="JSX延伸属性"><a href="#JSX延伸属性" class="headerlink" title="JSX延伸属性"></a>JSX延伸属性</h4><p>为了解决手动添加属性造成的类型错误，React设定初始化完props后，props是不可改变的。为了解决这个问题，React引入了属性延伸。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var props = &#123;&#125;;</div><div class="line">props.foo = x;</div><div class="line">props.bar = y;</div><div class="line">var component = &lt;Component &#123;...props&#125; /&gt;;</div></pre></td></tr></table></figure>
+<p>当需要拓展我们的属性的时候，定义一个属性对象，并通过{…props}的方式引入，React会帮我们拷贝到组件的props属性中。重要的是—这个过程是由React操控的，不是手动添赋值的属性。<br>需要覆盖的时候可以这样写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">var defaultStyle = &#123;   // 这两种方法写样式都能显示 ，但是还是用小驼峰的写法推荐</div><div class="line">  &apos;font-size&apos;:&apos;20px&apos;,</div><div class="line">  &apos;listStyleType&apos;:&apos;none&apos;</div><div class="line">&#125;</div><div class="line">var NodeList = React.createClass(&#123;</div><div class="line">    render: function()&#123;</div><div class="line">        return(</div><div class="line">            &lt;ol&gt;</div><div class="line">              &#123;</div><div class="line">                  React.Children.map(this.props.children, function(child)&#123;</div><div class="line">                      return &lt;li style=&#123;defaultStyle&#125;&gt;&#123;child&#125;&lt;/li&gt;</div><div class="line">                  &#125;)</div><div class="line">              &#125;</div><div class="line">            &lt;/ol&gt;</div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">   &lt;NodeList&gt;</div><div class="line">      &lt;span&gt;23&lt;/span&gt;</div><div class="line">      &lt;span&gt;88&lt;/span&gt;</div><div class="line">   &lt;/NodeList&gt;,</div><div class="line">   document.getElementById(&apos;example2&apos;)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h4 id="style属性"><a href="#style属性" class="headerlink" title="style属性"></a>style属性</h4><p>在React中写行内样式时，要这样写，不能采用引号的书写方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(</div><div class="line">    &lt;div style=&#123;&#123;color:&apos;red&apos;&#125;&#125;&gt;</div><div class="line">        xxxxx</div><div class="line">    &lt;/div&gt;,</div><div class="line">    document.body</div><div class="line">);</div></pre></td></tr></table></figure>
+<h4 id="自定义HTML属性"><a href="#自定义HTML属性" class="headerlink" title="自定义HTML属性"></a>自定义HTML属性</h4><p> <code>data-*</code> 、<code>aria-*</code></p>
+<p> 如果在编写React过程中往原生HTML标签中使用了自定义属性，React不会渲染的<br>【然而任意属性支持自定义元素 】</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(</div><div class="line">    &lt;div data-dd=&apos;xxx&apos; aria-dd=&apos;xxx&apos;&gt;content&lt;/div&gt;,</div><div class="line">    document.body</div><div class="line">);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;打算对React的学习过程 分阶段性的学习和总结吧，先把这周主要看的学的知识点做个记录，后期慢慢学到新的东西慢慢整理起来。刚开始比较生疏，难免有问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;ReactDOM-render&quot;&gt;&lt;a hr
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="https://hyb628.github.io/tags/JavaScript/"/>
+    
       <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
+    
+      <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS Hack、JS userAgent</title>
+    <link href="https://hyb628.github.io/2016/05/25/csshack-jsagent/"/>
+    <id>https://hyb628.github.io/2016/05/25/csshack-jsagent/</id>
+    <published>2016-05-25T12:56:55.000Z</published>
+    <updated>2017-04-29T13:07:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>摘要：项目中刚好遇到一个样式问题，win10版本的IE11、Edge跟我win8系统IE11浏览器出现了不同程度的样式差异，假如有一像素偏差吧。实在是没辙了，想单纯用CSS去解决，在不动用JS情况下，找了好久的资料，试了几次，发现国外一个大牛写的不错。就整理下。</p>
+</blockquote>
+<p>HACK：</p>
+<ul>
+<li><a href="http://browserhacks.com/" target="_blank" rel="external">browserhacks</a></li>
+<li><a href="https://browserstrangeness.bitbucket.io/css_hacks.html?" target="_blank" rel="external">browserstrangeness</a></li>
+</ul>
+<p>具体内容自己看比较省事，遇到问题有针对性的去解决。</p>
+<p>不过，一开始找到的解决我的问题，在<a href="http://stackoverflow.com/search?q=CSS+hack" target="_blank" rel="external">stackoverflow</a>上针对CSS hack的回答一个个找好心累，试了又不一定成功，所以就这么搞了，最终找到一个合适的，没办法，业务的东西，只能用hack。</p>
+<p>面整理一个侦测IE的Javascript，目前最高支援到IE12。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">function isIEVersion() &#123;</div><div class="line">    var ua = window.navigator.userAgent;</div><div class="line">    var msie = ua.indexOf(&apos;MSIE &apos;);</div><div class="line">    if (msie &gt; 0) &#123;</div><div class="line">        // 回傳版本 &lt;=10 的版本</div><div class="line">        return parseInt(ua.substring(msie + 5, ua.indexOf(&apos;.&apos;, msie)), 10);</div><div class="line">    &#125;</div><div class="line">    var trident = ua.indexOf(&apos;Trident/&apos;);</div><div class="line">    if (trident &gt; 0) &#123;</div><div class="line">        // 回傳版本 &gt;=11 的版本</div><div class="line">        var rv = ua.indexOf(&apos;rv:&apos;);</div><div class="line">        return parseInt(ua.substring(rv + 3, ua.indexOf(&apos;.&apos;, rv)), 10);</div><div class="line">    &#125;</div><div class="line">    var edge = ua.indexOf(&apos;Edge/&apos;);</div><div class="line">    if (edge &gt; 0) &#123;</div><div class="line">        // 判斷Edge</div><div class="line">        return parseInt(ua.substring(edge + 5, ua.indexOf(&apos;.&apos;, edge)), 10);</div><div class="line">    &#125;</div><div class="line">    // other browser</div><div class="line">    return false;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>2016.5.27  更新</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.ui-select-options &#123; </div><div class="line">  min-width: 85px\0;</div><div class="line">&#125; </div><div class="line">/*9-11*/ </div><div class="line">_::selection, .ui-select-options &#123; </div><div class="line">  min-width: auto\0; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>处理完后，遇到IE8的下拉问题，接着遇到IE8刷新报错的问题，这个真叫棘手问题。测试开发环境是打包的代码，所有很难找到具体什么原因，只提示一个ECUI.js undefined问题，无奈把测试环境的打包代码都干掉 ，部署本地未打包的源码上去 一个个功能模块去测试，最后，发现是日期组件的问题。只能联系成都的小伙伴看看，叫写组件的看看，确实不是我这边代码问题后，只能修改ECUI.js 做容错处理。</p>
+<p>OK，大神就是大神，确定问题后，只能打包构建提测吧，每次总觉得 一到晚上 测试总会给我来个Bug，让我都担心受怕的。这都周五了，我想静静！还指望周末打个球。</p>
+<p>早上在修改测试环境的时候，准备把一个文件夹下面的所有文件移到上级目录的时候，因为键盘数字键盘关了，导致 <code>mv * ../</code> 变成了 <code>mv * /</code>， My Gold，都跑到根目录下了。无奈只能一个个删除咯。</p>
+<p>safari浏览器判断:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if (navigator.userAgent.indexOf(&apos;Mac OS X&apos;) &gt; 0 &amp;&amp; navigator.userAgent.indexOf(&apos;Safari&apos;) &gt; -1 &amp;&amp;  navigator.userAgent.indexOf(&apos;Chrome&apos;) &lt; 0) &#123;</div><div class="line">     // code</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>不判断Chrome的话会跟Mac下安装的Chrome 和 QQ浏览器混淆，因为在Mac下QQ浏览器返回userAgent：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 QQBrowser/4.0.4035.400&quot;</div></pre></td></tr></table></figure>
+<p>Chrome在Mac返回的userAgent信息是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36&quot;</div></pre></td></tr></table></figure></p>
+<p>FireFox在Mac下返回的userAgent信息是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:45.0) Gecko/20100101 Firefox/45.0&quot;</div></pre></td></tr></table></figure></p>
+<p>Opera在Mac下返回的userAgent信息是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 OPR/36.0.2130.65&quot;</div></pre></td></tr></table></figure></p>
+<p>所以判断有没有Chrome这个关键字就能判断是不是Mac下Safari了。</p>
+<blockquote>
+<p>2016.5.27  pm 更新</p>
+</blockquote>
+<p>发现测试人员用了一个软件挺有意思的，<a href="http://oldj.github.io/SwitchHosts/" target="_blank" rel="external">SwitchHost</a> 推荐一下。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;摘要：项目中刚好遇到一个样式问题，win10版本的IE11、Edge跟我win8系统IE11浏览器出现了不同程度的样式差异，假如有一像素偏差吧。实在是没辙了，想单纯用CSS去解决，在不动用JS情况下，找了好久的资料，试了几次，发现国外一个大牛写的不
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="https://hyb628.github.io/tags/CSS/"/>
+    
+      <category term="Hack" scheme="https://hyb628.github.io/tags/Hack/"/>
+    
+      <category term="userAgent" scheme="https://hyb628.github.io/tags/userAgent/"/>
     
   </entry>
   
@@ -488,9 +639,112 @@
     
       <category term="ES6" scheme="https://hyb628.github.io/tags/ES6/"/>
     
+      <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
+    
       <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
     
-      <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
+  </entry>
+  
+  <entry>
+    <title>古水北镇</title>
+    <link href="https://hyb628.github.io/2016/05/18/20160518%E5%8F%A4%E6%B0%B4%E5%8C%97%E9%95%87/"/>
+    <id>https://hyb628.github.io/2016/05/18/20160518古水北镇/</id>
+    <published>2016-05-18T13:20:21.000Z</published>
+    <updated>2017-04-29T13:28:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>快20天没唠叨了，本想今晚睡前说点啥或者写个技术总结啥的，但是无奈快要感冒似的 （估计刚抽完烟自我感觉有关系），下次再说来这里写吧。听首歌再去睡觉。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=35470197&auto=1&height=66"></iframe>
+
+<p>周末部门间要团建，所以到时候估计就有照片又可以更新了，昨天在Mac上面安装AE，打开速度很快的我快眼瞎了，所以就打算周末要是有好的照片啥的或者 周末回来弄个AE 刚好可以试试电脑渲速度。</p>
+<p>[2016.5 更新]</p>
+<p>古水北镇 &amp; 长城 浪去了~~</p>
+<p><img src="/images/20160518/1.jpg" alt=""></p>
+<p><img src="/images/20160518/2.jpg" alt=""></p>
+<iframe src="http://yuntv.letv.com/bcloud.html?uu=n69ejaickb&amp;vu=e18839e26b&amp;auto_play=0&amp;gpcflag=1&amp;width=640&amp;height=360" width="100%" height="380" frameborder="0" marginwidth="0" marginheight="0"></iframe>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;快20天没唠叨了，本想今晚睡前说点啥或者写个技术总结啥的，但是无奈快要感冒似的 （估计刚抽完烟自我感觉有关系），下次再说来这里写吧。听首歌再去睡觉。&lt;/p&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; margin
+    
+    </summary>
+    
+      <category term="生活" scheme="https://hyb628.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="随笔" scheme="https://hyb628.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="生活" scheme="https://hyb628.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>路过厦门</title>
+    <link href="https://hyb628.github.io/2016/04/30/20160430%E9%9A%8F%E7%AC%94/"/>
+    <id>https://hyb628.github.io/2016/04/30/20160430随笔/</id>
+    <published>2016-04-30T13:11:05.000Z</published>
+    <updated>2017-04-29T13:19:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<video src="/video/20160501124140.mp4" controls="controls"></video>
+
+
+<p>本来打算五一在北京继续溜达，或者宅家里，然后跟家里通电话，就叫我回去了，顺带五一要扫墓，所以，没办法，深夜2点到机场，早上6点多的飞机到泉州晋江，一夜没睡，超级困。</p>
+<p>到泉州，坐摩托到晋江火车站，然后就到厦门站，然后跟明锦去了海边溜达溜达就时间过得很快了。没那么多时间继续停留了。</p>
+<p>回家后，发现，原本规划好的时间，你会发现每次都悄悄溜走了。明天就得去扫墓下，一天时间估计又要过去了。然后就要回北京了。又是各种忙碌。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;video src=&quot;/video/20160501124140.mp4&quot; controls=&quot;controls&quot;&gt;&lt;/video&gt;
+
+
+&lt;p&gt;本来打算五一在北京继续溜达，或者宅家里，然后跟家里通电话，就叫我回去了，顺带五一要扫墓，所以，没办法，深夜2点到机场，早上6点多的飞机
+    
+    </summary>
+    
+      <category term="生活" scheme="https://hyb628.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="随笔" scheme="https://hyb628.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="生活" scheme="https://hyb628.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>求display值的面试题分析</title>
+    <link href="https://hyb628.github.io/2016/04/09/%E6%B1%82display%E5%80%BC%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98%E5%88%86%E6%9E%90/"/>
+    <id>https://hyb628.github.io/2016/04/09/求display值的面试题分析/</id>
+    <published>2016-04-09T13:30:52.000Z</published>
+    <updated>2017-04-29T13:39:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>题目是这样的： 一个空span标签被赋予下列属性时，对应的display计算值（compute value）</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">		.span1&#123;color:#9999&#125;</div><div class="line">		.span2&#123;float:left&#125;</div><div class="line">		.span3&#123;position:relative&#125;</div><div class="line">		.span4&#123;position:absolute&#125;</div><div class="line">		.span5&#123;visibility:none&#125;</div><div class="line">		.span6&#123;display:-webkit-grid;float:left&#125;</div><div class="line">		.span7&#123;display:inline-table;float:left&#125;</div><div class="line">		.span8&#123;display:inline-block;float:left&#125;</div><div class="line">		.span9&#123;display:inline-flex;float:left&#125;</div><div class="line">		.span10&#123;display:flex;float:left&#125;</div><div class="line">		.span11&#123;display:-webkit-grid&#125;</div><div class="line">		.span12&#123;display:flex&#125;</div><div class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	    <span class="comment">&lt;!-- 填写当一个无样式的空span被赋予下列属性时 --&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span1"</span>&gt;</span>1、color: #9999;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span2"</span>&gt;</span>2、float: left; <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span3"</span>&gt;</span>3、position: relative;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span4"</span>&gt;</span>4、position: absolute;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span5"</span>&gt;</span>5、visibility: none;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span6"</span>&gt;</span>6、display: -webkit-grid;float:left;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span7"</span>&gt;</span>7、display: inline-table;float: left;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span8"</span>&gt;</span>8、display:inline-block;float:left;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span9"</span>&gt;</span>9、display:inline-flex;float:left;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span10"</span>&gt;</span>10、display:flex;float:left;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span11"</span>&gt;</span>11、display:-webkit-grid<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span12"</span>&gt;</span>12、display:flex<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">		var spans = document.getElementsByTagName('span');</div><div class="line"></div><div class="line">		function getStyle(element, proName)&#123;</div><div class="line">		     var eleStyle;</div><div class="line">		     if(!document.defaultView)&#123;</div><div class="line">		          eleStyle = element.currentStyle[proName];</div><div class="line">		     &#125; else &#123;</div><div class="line">		         eleStyle = document.defaultView.getComputedStyle(element)[proName];</div><div class="line">		     &#125;</div><div class="line">		     return eleStyle;</div><div class="line">		&#125;</div><div class="line">		for (var i = 0; i &lt; spans.length; i++) &#123;</div><div class="line">			console.log(spans[i].innerHTML + '获取到的display结果为：' + getStyle(spans[i],'display'));</div><div class="line">		&#125;</div><div class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#9999</span>;获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">inline</span></div><div class="line"><span class="selector-tag">float</span>: <span class="selector-tag">left</span>; 获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">block</span></div><div class="line"><span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">inline</span></div><div class="line"><span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">block</span></div><div class="line"><span class="selector-tag">visibility</span>: <span class="selector-tag">none</span>;获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">inline</span></div><div class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-grid</span>;<span class="selector-tag">float</span><span class="selector-pseudo">:left</span>;获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">block</span></div><div class="line"><span class="selector-tag">display</span>: <span class="selector-tag">inline-table</span>;<span class="selector-tag">float</span>: <span class="selector-tag">left</span>;获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">table</span></div><div class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:inline-block</span>;<span class="selector-tag">float</span><span class="selector-pseudo">:left</span>;获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">block</span></div><div class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:inline-flex</span>;<span class="selector-tag">float</span><span class="selector-pseudo">:left</span>;获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">flex</span></div><div class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:flex</span>;<span class="selector-tag">float</span><span class="selector-pseudo">:left</span>;获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">flex</span></div><div class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:-webkit-grid</span>获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">inline</span></div><div class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:flex</span>获取到的<span class="selector-tag">display</span>结果为：<span class="selector-tag">flex</span></div></pre></td></tr></table></figure>
+<p>其实重点还是我加粗的这两个结果，因为之前自己的理解table标签是块元素 所以想到的就是display:table;之后加上float<br>:left;应该是block的结果呈现猜对 不过还是不对，答案运行出来还是很意外。</p>
+<p>所以还是不明白为什么这样，因为我换做<code>display:table-cell</code>;（类似table中的td），<code>float:left</code>;一起，结果是block；</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/display" target="_blank" rel="external">MDN</a>上面的解释还是没说到我想要的答案，但是找了一对资料还是没明白清楚，于是，找到 <a href="https://css-tricks.com/forums/topic/problem-table-cell-table-row-with-safari-chrome/" target="_blank" rel="external">CSS-Tricks</a>上面一个老外的回复说 如果display:table;或者是display:inline-table;和float:left；一起的话，默认是优先级为table。测试的过程中只有table/inline-table 与float 或者是 flex / inline-flex 与float 结合的时候才优先 取得diaplay值为table或者是flex; 其实float 换做position: absolute; 其实跟float一样都是脱离文档流的。 flex是弹性布局，table布局的时候，结合table-cell 一起效果就能看出，所以table用来实现水平垂直居中，你的table-cell 不用设置宽高，自己会默认赋予。</p>
+<p>理解的不够透彻吧~ 不过还是希望理解的小伙伴给予说明，不胜感谢。或者是具体是吗办法来理解比较专业？</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;题目是这样的： 一个空span标签被赋予下列属性时，对应的display计算值（compute value）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="https://hyb628.github.io/tags/CSS/"/>
+    
+      <category term="Flex" scheme="https://hyb628.github.io/tags/Flex/"/>
     
   </entry>
   
