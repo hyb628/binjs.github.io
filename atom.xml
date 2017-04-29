@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hyb628.github.io/"/>
-  <updated>2017-04-28T06:33:27.000Z</updated>
+  <updated>2017-04-29T03:31:28.000Z</updated>
   <id>https://hyb628.github.io/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>ES6的Array.from、Set数组去重</title>
-    <link href="https://hyb628.github.io/2017/04/27/ES6%E7%9A%84Array.from%E3%80%81Set%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
-    <id>https://hyb628.github.io/2017/04/27/ES6的Array.from、Set数组去重/</id>
-    <published>2017-04-27T02:13:55.000Z</published>
-    <updated>2017-04-28T06:33:27.000Z</updated>
+    <link href="https://hyb628.github.io/2017/04/26/ES6%E7%9A%84Array.from%E3%80%81Set%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
+    <id>https://hyb628.github.io/2017/04/26/ES6的Array.from、Set数组去重/</id>
+    <published>2017-04-26T06:26:24.000Z</published>
+    <updated>2017-04-29T03:31:28.000Z</updated>
     
     <content type="html"><![CDATA[<h5 id="Set数据结构"><a href="#Set数据结构" class="headerlink" title="Set数据结构"></a>Set数据结构</h5><p>ES6中新增了Set数据结构，类似于数组，但是 它的成员都是唯一的 ，其构造函数可以接受一个数组作为参数，如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(array);</div><div class="line"><span class="built_in">console</span>.log(set);</div><div class="line"><span class="comment">// =&gt; Set &#123;1, 2, 3, 4, 5&#125;</span></div></pre></td></tr></table></figure>
@@ -36,6 +36,12 @@
     
     </summary>
     
+      <category term="JavaScript" scheme="https://hyb628.github.io/categories/JavaScript/"/>
+    
+    
+      <category term="ES6" scheme="https://hyb628.github.io/tags/ES6/"/>
+    
+      <category term="数组去重" scheme="https://hyb628.github.io/tags/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
     
   </entry>
   

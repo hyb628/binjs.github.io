@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="一喵呜,前端开发,JavaScript,CSS3,HTML5,React，Angular,开发工具，随笔生活" />
+  <meta name="keywords" content="ES6,数组去重," />
 
 
 
@@ -92,12 +92,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="一喵呜">
-<meta property="og:url" content="https://hyb628.github.io/index.html">
+<meta name="description" content="Set数据结构ES6中新增了Set数据结构，类似于数组，但是 它的成员都是唯一的 ，其构造函数可以接受一个数组作为参数，如： 1234let array = [1, 1, 1, 1, 2, 3, 4, 4, 5, 3];let set = new Set(array);console.log(set);// =&amp;gt; Set &amp;#123;1, 2, 3, 4, 5&amp;#125; Array.fro">
+<meta name="keywords" content="ES6,数组去重">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6的Array.from、Set数组去重">
+<meta property="og:url" content="https://hyb628.github.io/2017/04/26/ES6的Array.from、Set数组去重/index.html">
 <meta property="og:site_name" content="一喵呜">
+<meta property="og:description" content="Set数据结构ES6中新增了Set数据结构，类似于数组，但是 它的成员都是唯一的 ，其构造函数可以接受一个数组作为参数，如： 1234let array = [1, 1, 1, 1, 2, 3, 4, 4, 5, 3];let set = new Set(array);console.log(set);// =&amp;gt; Set &amp;#123;1, 2, 3, 4, 5&amp;#125; Array.fro">
+<meta property="og:updated_time" content="2017-04-29T03:31:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一喵呜">
+<meta name="twitter:title" content="ES6的Array.from、Set数组去重">
+<meta name="twitter:description" content="Set数据结构ES6中新增了Set数据结构，类似于数组，但是 它的成员都是唯一的 ，其构造函数可以接受一个数组作为参数，如： 1234let array = [1, 1, 1, 1, 2, 3, 4, 4, 5, 3];let set = new Set(array);console.log(set);// =&amp;gt; Set &amp;#123;1, 2, 3, 4, 5&amp;#125; Array.fro">
 
 
 
@@ -125,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://hyb628.github.io/"/>
+  <link rel="canonical" href="https://hyb628.github.io/2017/04/26/ES6的Array.from、Set数组去重/"/>
 
 
 
 
 
-  <title>一喵呜</title>
+  <title>ES6的Array.from、Set数组去重 | 一喵呜</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,9 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -305,9 +308,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -337,10 +340,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/04/26/ES6的Array.from、Set数组去重/" itemprop="url">
-                  ES6的Array.from、Set数组去重
-                </a>
+                ES6的Array.from、Set数组去重
               
             
           </h2>
@@ -412,53 +412,80 @@
       
 
       
+        <h5 id="Set数据结构"><a href="#Set数据结构" class="headerlink" title="Set数据结构"></a>Set数据结构</h5><p>ES6中新增了Set数据结构，类似于数组，但是 它的成员都是唯一的 ，其构造函数可以接受一个数组作为参数，如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(array);</div><div class="line"><span class="built_in">console</span>.log(set);</div><div class="line"><span class="comment">// =&gt; Set &#123;1, 2, 3, 4, 5&#125;</span></div></pre></td></tr></table></figure>
+<h5 id="Array-from"><a href="#Array-from" class="headerlink" title="Array.from"></a>Array.from</h5><p>ES6中Array新增了一个静态方法<code>Array.from</code>，可以把类似数组的对象转换为数组，如通过<code>querySelectAll</code>方法得到HTML DOM Node List，以及ES6中新增的<code>Set</code>和<code>Map</code>等可遍历对象，如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>();</div><div class="line">set.add(<span class="number">1</span>).add(<span class="number">2</span>).add(<span class="number">3</span>);</div><div class="line"><span class="keyword">let</span> array = <span class="built_in">Array</span>.from(set);</div><div class="line"><span class="built_in">console</span>.log(array); <span class="comment">//  [1, 2, 3]</span></div></pre></td></tr></table></figure>
+<p>于是，现在我们可以用一行代码实现数组去重了：于是，现在我们可以用一行代码实现数组去重了:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> array = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>]));</div><div class="line"><span class="built_in">console</span>.log(array); <span class="comment">//[1, 2, 3, 4]</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
         
-          
-          Set数据结构ES6中新增了Set数据结构，类似于数组，但是 它的成员都是唯一的 ，其构造函数可以接受一个数组作为参数，如：
-1234let array = [1, 1, 1, 1, 2, 3, 4, 4, 5, 3];let set = new Set(array);console.log(set
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/26/ES6的Array.from、Set数组去重/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      一喵呜
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://hyb628.github.io/2017/04/26/ES6的Array.from、Set数组去重/" title="ES6的Array.from、Set数组去重">https://hyb628.github.io/2017/04/26/ES6的Array.from、Set数组去重/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
 
-    <div>
-      
-    </div>
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/ES6/" rel="tag"># ES6</a>
+          
+            <a href="/tags/数组去重/" rel="tag"># 数组去重</a>
+          
+        </div>
+      
+
+      
+        
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -466,6 +493,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -485,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -584,6 +624,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Set数据结构"><span class="nav-number">1.</span> <span class="nav-text">Set数据结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Array-from"><span class="nav-number">2.</span> <span class="nav-text">Array.from</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -688,6 +744,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
