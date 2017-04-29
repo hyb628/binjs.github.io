@@ -99,43 +99,354 @@
   </entry>
   
   <entry>
+    <title>随笔 2016-08-6</title>
+    <link href="https://hyb628.github.io/2016/08/06/20160806%E9%9A%8F%E7%AC%94/"/>
+    <id>https://hyb628.github.io/2016/08/06/20160806随笔/</id>
+    <published>2016-08-06T08:36:17.000Z</published>
+    <updated>2017-04-29T08:48:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>深夜，又是一个周末，难得这个周末啥都断想，啥都不管，就这么放空。</p>
+<p><img src="/images/20160806/2016-8-6.jpg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;深夜，又是一个周末，难得这个周末啥都断想，啥都不管，就这么放空。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/20160806/2016-8-6.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="生活" scheme="https://hyb628.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="随笔" scheme="https://hyb628.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="生活" scheme="https://hyb628.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SASS用法小记</title>
+    <link href="https://hyb628.github.io/2016/06/18/SASS%E7%94%A8%E6%B3%95%E5%B0%8F%E8%AE%B0/"/>
+    <id>https://hyb628.github.io/2016/06/18/SASS用法小记/</id>
+    <published>2016-06-18T08:46:53.000Z</published>
+    <updated>2017-04-29T08:55:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前项目用LESS，现在新项目打算用SASS，所以做个主要常用知识点小记。</p>
+<h4 id="在线编译地址"><a href="#在线编译地址" class="headerlink" title="在线编译地址"></a><a href="http://www.sassmeister.com/" target="_blank" rel="external">在线编译地址</a></h4><h4 id="import-引入"><a href="#import-引入" class="headerlink" title="@import 引入"></a>@import 引入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">　@import &quot;../binjs.scss&quot;;  // 引入文件</div><div class="line">　@import &quot;../huangyb.css&quot;;</div></pre></td></tr></table></figure>
+<h4 id="mixin-混入"><a href="#mixin-混入" class="headerlink" title="@mixin 混入"></a>@mixin 混入</h4><blockquote>
+<p>注意：LESS的变量用<code>@</code> , SASS是 <code>$</code> </p>
+</blockquote>
+<ul>
+<li>带参数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@mixin borderSet($dott: solid, $color: #fcf) &#123;</div><div class="line">  border: 8px $dott $color;</div><div class="line">&#125;</div><div class="line">div &#123;</div><div class="line">    opacity: 0;</div><div class="line">    @include borderSet(dotted, #fa0); //带参数传入</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>不带参数 显示默认值 不定义参数值 就显示默认值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@mixin borderSet($dott: solid, $color: #fcf) &#123;</div><div class="line">  border: 8px $dott $color;</div><div class="line">&#125;</div><div class="line">div &#123;</div><div class="line">    opacity: 0;</div><div class="line">    @include borderSet; //不带参数传入 可括号 可不括号</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h4><blockquote>
+<p>LESS也是一样的嵌套规则， <code>&amp;</code> 符号都相同</p>
+</blockquote>
+<ul>
+<li><p>使用&amp;引用父元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">    opacity: 0;</div><div class="line">    @include borderSet(); //不带参数传入 可括号 可不括号</div><div class="line">    &amp;:after  &#123;</div><div class="line">      color:#ccc;</div><div class="line">    &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>属性的嵌套</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> p &#123;</div><div class="line">  border: &#123;</div><div class="line">    color:red;</div><div class="line">    width:12px;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="变量用-包裹"><a href="#变量用-包裹" class="headerlink" title="变量用 #{} 包裹"></a>变量用 <code>#{}</code> 包裹</h4><p>如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。一般来说，我们设置的变量都是用于属性值的，而如果用在属性或者选择器上，就得以#{}包裹起来了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$className:huangyb;</div><div class="line">.#&#123;$className&#125; &#123;</div><div class="line">  width: 12px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 解析成</div><div class="line">.huangyb &#123;</div><div class="line">  width: 12px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$side : left;</div><div class="line">.#&#123;$side&#125; &#123;</div><div class="line">　　border-#&#123;$side&#125;-radius: 5px;</div><div class="line">&#125;</div><div class="line">// 解析成</div><div class="line">.left &#123;</div><div class="line">  　　border-left-radius: 5px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="default-的使用"><a href="#default-的使用" class="headerlink" title="!default 的使用"></a>!default 的使用</h4><p>正常情况下 声明两个变量 会出现后面覆盖前面的变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$color:red;</div><div class="line">$color:blue;</div><div class="line">p&#123;</div><div class="line">    color:$color; //blue</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>若声明了 <code>!default</code> 会就不能出现覆盖的现象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$color:red;</div><div class="line">$color:blue !default;</div><div class="line">p&#123;</div><div class="line">    color:$color; //red</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="多个变量的声明"><a href="#多个变量的声明" class="headerlink" title="多个变量的声明"></a>多个变量的声明</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">$linkColor: red blue;</div><div class="line"></div><div class="line">a&#123;</div><div class="line">    color:nth($linkColor,1);</div><div class="line">    &amp;:hover&#123;</div><div class="line">        color:nth($linkColor,2);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 解析后</div><div class="line">a &#123;</div><div class="line">  color: red;</div><div class="line">&#125;</div><div class="line">a:hover &#123;</div><div class="line">  color: blue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="extend-继承"><a href="#extend-继承" class="headerlink" title="@extend 继承"></a>@extend 继承</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">div &#123; </div><div class="line">  color:#fcf; </div><div class="line">  </div><div class="line">&#125;</div><div class="line">p &#123; </div><div class="line">  @extend div; </div><div class="line">  width:10px; </div><div class="line">&#125;</div><div class="line">span &#123;</div><div class="line">  @extend p;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 解析后</div><div class="line">div, p, span &#123;</div><div class="line">  color: #fcf;</div><div class="line">&#125;</div><div class="line"></div><div class="line">p, span &#123;</div><div class="line">  width: 10px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="function"><a href="#function" class="headerlink" title="function"></a>function</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@function binjs($value) &#123;</div><div class="line">  @return #&#123;$value&#125;px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">div &#123;</div><div class="line">  width: binjs(30);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//解析后</div><div class="line">div &#123;</div><div class="line">  width: 30px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="if-else-条件判断"><a href="#if-else-条件判断" class="headerlink" title="@if @else 条件判断"></a>@if @else 条件判断</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$width:12px;</div><div class="line">div &#123;</div><div class="line">  @if ($width&gt;10) &#123;</div><div class="line">     color:#fcf;</div><div class="line">  &#125; @else &#123;</div><div class="line">    color:#fa0;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前项目用LESS，现在新项目打算用SASS，所以做个主要常用知识点小记。&lt;/p&gt;
+&lt;h4 id=&quot;在线编译地址&quot;&gt;&lt;a href=&quot;#在线编译地址&quot; class=&quot;headerlink&quot; title=&quot;在线编译地址&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.sas
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="SASS" scheme="https://hyb628.github.io/tags/SASS/"/>
+    
+      <category term="CSS" scheme="https://hyb628.github.io/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6数组的扩展</title>
+    <link href="https://hyb628.github.io/2016/06/13/ES6%E6%95%B0%E7%BB%84%E7%9A%84%E6%89%A9%E5%B1%95/"/>
+    <id>https://hyb628.github.io/2016/06/13/ES6数组的扩展/</id>
+    <published>2016-06-13T08:46:53.000Z</published>
+    <updated>2017-04-29T09:36:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天培训了,只能自己看这些东西啦。一天时间又过去了。现在文章，或者我的印象笔记都是采用Markdown 来写了， 是不是看起来比较整洁了。有点想改用Hexo, 看着很不错，markdown 也写得比较有意思 貌似。 一直想弄 ，但是又怕麻烦。</p>
+<h5 id="Array-from"><a href="#Array-from" class="headerlink" title="Array.from"></a>Array.from</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">let arrayLike = &#123;</div><div class="line">    &apos;0&apos;: &apos;a&apos;,</div><div class="line">    &apos;1&apos;: &apos;b&apos;,</div><div class="line">    &apos;2&apos;: &apos;c&apos;,</div><div class="line">    length: 3</div><div class="line">&#125;;</div><div class="line"></div><div class="line">// ES5的写法</div><div class="line">var arr1 = [].slice.call(arrayLike); // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</div><div class="line">等同于：</div><div class="line">var arr1 = Array.prototype.slice.call(arrayLike); // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</div><div class="line"></div><div class="line">// ES6的写法</div><div class="line">let arr2 = Array.from(arrayLike); // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</div></pre></td></tr></table></figure>
+<p><a href="http://www.binjs.com/archives/1560" target="_blank" rel="external">查看之前文章Array.prototype.slice.call介绍</a></p>
+<p>不过，对象数组的写法需要严格按照规范写，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var foo = &#123;0:&apos;hello&apos;,1:&apos;world&apos;,length:4&#125;;</div><div class="line"></div><div class="line">Array.prototype.slice.call(foo);  // [&quot;hello&quot;, &quot;world&quot;, undefined × 2]</div><div class="line">Array.from(arrayLike); // [&quot;hello&quot;, &quot;world&quot;, undefined, undefined]</div></pre></td></tr></table></figure></p>
+<p><code>Array.from()</code>   的第一个参数决定第二个参数的执行次数， </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Array.from(&#123; length: 3 &#125;); // [undefined, undefined, undefinded]</div><div class="line">Array.from(&#123;length:3&#125;,() =&gt;&apos;binjs&apos;); // [&apos;binjs&apos;, &apos;binjs&apos;, &apos;binjs&apos;]</div></pre></td></tr></table></figure>
+<p><code>Array.from()</code>   还可以接受第二个参数，作用类似于数组的map方法，用来对每个元素进行处理，将处理后的值放入返回的数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Array.from(arrayLike, x =&gt; x * x);</div><div class="line">// 等同于</div><div class="line">Array.from(arrayLike).map(x =&gt; x * x);</div><div class="line"></div><div class="line">Array.from([1, 2, 3], (x) =&gt; x * x)</div><div class="line">// [1, 4, 9]</div></pre></td></tr></table></figure>
+<p>只要是部署了<code>Iterator</code>接口的数据结构，<code>Array.from</code>都能将其转为数组。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Array.from(&apos;hello&apos;); // [&apos;h&apos;, &apos;e&apos;, &apos;l&apos;, &apos;l&apos;, &apos;o&apos;]</div><div class="line"></div><div class="line">let namesSet = new Set([&apos;a&apos;, &apos;b&apos;]);</div><div class="line">Array.from(namesSet); // [&apos;a&apos;, &apos;b&apos;]</div></pre></td></tr></table></figure></p>
+<h5 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of"></a>Array.of</h5><p>方法用于将一组值，转换为数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Array.of() // []</div><div class="line">Array.of(undefined) // [undefined]</div><div class="line">Array.of(1) // [1]</div><div class="line">Array.of(1, 2) // [1, 2]</div></pre></td></tr></table></figure>
+<h5 id="includes"><a href="#includes" class="headerlink" title="includes"></a>includes</h5><p>与字符串的includes方法类似<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[1,2,3].includes(1); // true</div></pre></td></tr></table></figure></p>
+<h5 id="ind-和-findIndex"><a href="#ind-和-findIndex" class="headerlink" title="ind() 和 findIndex()"></a>ind() 和 findIndex()</h5><p><code>find()</code> 返回数组中满足测试条件的一个元素，如果没有满足条件的元素，则返回 <code>undefined</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[1, 4, -5, 10].find((n) =&gt; n &lt; 0)</div></pre></td></tr></table></figure>
+<p> <code>find</code>方法的回调函数可以接受三个参数，依次为当前的值、当前的位置和原数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[1, 3, 5].find(function(value, index, arr) &#123;</div><div class="line">  console.log(value);</div><div class="line">  console.log(index);</div><div class="line">  console.log(arr); </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><code>findIndex()</code>  用来查找指定的索引，如果找不到指定的元素, 则返回 <code>-1</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[1, 5, 10, 15].findIndex(function(value, index, arr) &#123;</div><div class="line">  return value &gt; 9;</div><div class="line">&#125;) // 2</div></pre></td></tr></table></figure>
+<h5 id="fill"><a href="#fill" class="headerlink" title="fill()"></a>fill()</h5><p><code>fill()</code>  用来进行数组的填充 ，第二和第三个参数表示开始和结束位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;].fill(7, 0, 1) //[7, &quot;b&quot;, &quot;c&quot;]</div><div class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;].fill(7, 0, 2) // [7, 7, &quot;c&quot;]</div></pre></td></tr></table></figure>
+<p><code>fill()</code>  可以用来初始化一个数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;].fill(7)</div><div class="line">// [7, 7, 7]</div><div class="line"></div><div class="line">new Array(3).fill(7)</div><div class="line">// [7, 7, 7]</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天培训了,只能自己看这些东西啦。一天时间又过去了。现在文章，或者我的印象笔记都是采用Markdown 来写了， 是不是看起来比较整洁了。有点想改用Hexo, 看着很不错，markdown 也写得比较有意思 貌似。 一直想弄 ，但是又怕麻烦。&lt;/p&gt;
+&lt;h5 id=&quot;Arr
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="ES6" scheme="https://hyb628.github.io/tags/ES6/"/>
+    
+      <category term="JavaScript" scheme="https://hyb628.github.io/tags/JavaScript/"/>
+    
+      <category term="数组" scheme="https://hyb628.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6数值的扩展</title>
+    <link href="https://hyb628.github.io/2016/06/12/ES6%E6%95%B0%E5%80%BC%E7%9A%84%E6%89%A9%E5%B1%95/"/>
+    <id>https://hyb628.github.io/2016/06/12/ES6数值的扩展/</id>
+    <published>2016-06-12T08:46:53.000Z</published>
+    <updated>2017-04-29T09:45:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="数值的扩展"><a href="#数值的扩展" class="headerlink" title="数值的扩展"></a>数值的扩展</h5><p>ES6提供了二进制和八进制数值的新的写法，分别用前缀<code>0b（或0B）</code>和<code>0o（或0O）</code>表示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">0b111110111 === 503 // true</div><div class="line">0o767 === 503 // true</div></pre></td></tr></table></figure>
+<p>转为十进制的方法 使用<code>Number</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Number(&apos;0b111&apos;)  // 7</div><div class="line">Number(&apos;0o10&apos;)   // 8</div></pre></td></tr></table></figure>
+<h6 id="Number-isFinite"><a href="#Number-isFinite" class="headerlink" title="Number.isFinite()"></a>Number.isFinite()</h6><p>用来检测传入的参数是否是一个有穷数。和全局的 <code>isFinite()</code> 函数相比，这个方法不会强制将一个非数字的参数转换成数字，这就意味着，只有真正的数字才有可能返回 true。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Number.isFinite(15); // true</div><div class="line">Number.isFinite(0.8); // true</div><div class="line">Number.isFinite(NaN); // false</div><div class="line">Number.isFinite(Infinity);  // false</div><div class="line">Number.isFinite(-Infinity); // false</div><div class="line">Number.isFinite(&apos;foo&apos;);     // false</div><div class="line">Number.isFinite(&apos;15&apos;);      // false</div><div class="line">Number.isFinite(true);      // false</div><div class="line">Number.isFinite(0);         // true</div><div class="line">Number.isFinite(2e64);      // true</div><div class="line">Number.isFinite(&apos;0&apos;);       // false, 全局函数 isFinite(&apos;0&apos;) 会返回 true</div></pre></td></tr></table></figure>
+<h6 id="Number-isNaN"><a href="#Number-isNaN" class="headerlink" title="Number.isNaN()"></a>Number.isNaN()</h6><p>用来检查一个值是否为<code>NaN</code>。</p>
+<p>这两个新方法只对数值有效，非数值一律返回false。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">isFinite(25) // true</div><div class="line">isFinite(&quot;25&quot;) // true</div><div class="line">Number.isFinite(25) // true</div><div class="line">Number.isFinite(&quot;25&quot;) // false</div><div class="line"></div><div class="line">isNaN(NaN) // true</div><div class="line">isNaN(&quot;NaN&quot;) // true</div><div class="line">Number.isNaN(NaN) // true</div><div class="line">Number.isNaN(&quot;NaN&quot;) // false</div></pre></td></tr></table></figure>
+<h6 id="Number-parseInt-Number-parseFloat"><a href="#Number-parseInt-Number-parseFloat" class="headerlink" title="Number.parseInt(), Number.parseFloat()"></a>Number.parseInt(), Number.parseFloat()</h6><p>ES6 将全局的parseInt 和 parseFloat移植到Number对象上</p>
+<h6 id="Number-isInteger"><a href="#Number-isInteger" class="headerlink" title="Number.isInteger()"></a>Number.isInteger()</h6><p>用来判断一个值是否为整数。需要注意的是，在JavaScript内部，整数和浮点数是同样的储存方法，所以3 与 3.0 || 3.00 被视为同一个值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Number.isInteger(25) // true</div><div class="line">Number.isInteger(25.0) // true</div><div class="line">Number.isInteger(25.1) // false</div><div class="line">Number.isInteger(&quot;15&quot;) // false</div><div class="line">Number.isInteger(true) // false</div></pre></td></tr></table></figure>
+<h6 id="Number-EPSILON-常量"><a href="#Number-EPSILON-常量" class="headerlink" title="Number.EPSILON 常量"></a>Number.EPSILON 常量</h6><p>ES6在Number对象上面，新增一个极小的常量<code>Number.EPSILON</code>。</p>
+<p>引入一个这么小的量的目的，在于为浮点数计算，设置一个误差范围。我们知道浮点数计算是不精确的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">0.1 + 0.2</div><div class="line">// 0.30000000000000004</div><div class="line"></div><div class="line">0.1 + 0.2 - 0.3</div><div class="line">// 5.551115123125783e-17</div><div class="line"></div><div class="line">5.551115123125783e-17.toFixed(20)</div><div class="line">// &apos;0.00000000000000005551&apos;</div></pre></td></tr></table></figure>
+<p>但是如果这个误差能够小于<code>Number.EPSILON</code>，我们就可以认为得到了正确结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">5.551115123125783e-17 &lt; Number.EPSILON  // true</div></pre></td></tr></table></figure>
+<h5 id="Math对象的扩展"><a href="#Math对象的扩展" class="headerlink" title="Math对象的扩展"></a>Math对象的扩展</h5><h6 id="Math-trunc"><a href="#Math-trunc" class="headerlink" title="Math.trunc()"></a>Math.trunc()</h6><p>用于去除一个数的小数部分，返回整数部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Math.trunc(4.1) // 4</div><div class="line">Math.trunc(4.9) // 4</div><div class="line">Math.trunc(-4.1) // -4</div><div class="line">Math.trunc(-4.9) // -4</div><div class="line">Math.trunc(-0.1234) // -0</div><div class="line">Math.trunc(&apos;123.456&apos;) // 123</div></pre></td></tr></table></figure>
+<p>对于空值和无法截取整数的值，返回<code>NaN</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Math.trunc(NaN);      // NaN</div><div class="line">Math.trunc(&apos;foo&apos;);    // NaN</div><div class="line">Math.trunc();         // NaN</div><div class="line">Math.trunc(&apos;123a.456&apos;) // NaN</div></pre></td></tr></table></figure>
+<h6 id="Math-sign"><a href="#Math-sign" class="headerlink" title="Math.sign()"></a>Math.sign()</h6><p>用来判断一个数到底是正数、负数、还是零。</p>
+<blockquote>
+<p>参数为正数，返回+1；<br>参数为负数，返回-1；<br>参数为0，返回0；<br>参数为-0，返回-0;<br>其他值，返回NaN。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Math.sign(-5)     // -1</div><div class="line">Math.sign(5)      // +1</div><div class="line">Math.sign(0)      // +0</div><div class="line">Math.sign(-0)     // -0</div><div class="line">Math.sign(NaN)    // NaN</div><div class="line">Math.sign(&apos;foo&apos;); // NaN</div><div class="line">Math.sign();      // NaN</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;数值的扩展&quot;&gt;&lt;a href=&quot;#数值的扩展&quot; class=&quot;headerlink&quot; title=&quot;数值的扩展&quot;&gt;&lt;/a&gt;数值的扩展&lt;/h5&gt;&lt;p&gt;ES6提供了二进制和八进制数值的新的写法，分别用前缀&lt;code&gt;0b（或0B）&lt;/code&gt;和&lt;code&gt;0o（或0
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="ES6" scheme="https://hyb628.github.io/tags/ES6/"/>
+    
+      <category term="JavaScript" scheme="https://hyb628.github.io/tags/JavaScript/"/>
+    
+      <category term="数值" scheme="https://hyb628.github.io/tags/%E6%95%B0%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6解构赋值</title>
+    <link href="https://hyb628.github.io/2016/06/11/ES6%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
+    <id>https://hyb628.github.io/2016/06/11/ES6解构赋值/</id>
+    <published>2016-06-11T08:46:53.000Z</published>
+    <updated>2017-04-29T09:52:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="配置文件-babelrc"><a href="#配置文件-babelrc" class="headerlink" title="配置文件.babelrc"></a>配置文件.babelrc</h5><p>Babel的配置文件是.babelrc，存放在项目的根目录下。使用Babel的第一步，就是配置这个文件。</p>
+<h5 id="ES草案阶段"><a href="#ES草案阶段" class="headerlink" title="ES草案阶段"></a>ES草案阶段</h5><ul>
+<li>Stage 0 - Strawman（展示阶段）</li>
+<li>Stage 1 - Proposal（征求意见阶段）</li>
+<li>Stage 2 - Draft（草案阶段）</li>
+<li>Stage 3 - Candidate（候选人阶段）</li>
+<li>Stage 4 - Finished（定案阶段）</li>
+</ul>
+<h5 id="let和const-命令"><a href="#let和const-命令" class="headerlink" title="let和const 命令"></a>let和const 命令</h5><p>let不像var那样会发生“变量提升”现象（就是var 定义了 然后输出undefined，let 直接报错 ）。所以，变量一定要在声明后使用，否则报错。</p>
+<h6 id="ES6的块级作用域"><a href="#ES6的块级作用域" class="headerlink" title="ES6的块级作用域"></a>ES6的块级作用域</h6><ul>
+<li><p>let实际上为JavaScript新增了块级作用域。</p>
+</li>
+<li><p>块级作用域的出现，实际上使得获得广泛应用的立即执行匿名函数（IIFE）不再必要了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// IIFE写法</div><div class="line">(function () &#123;</div><div class="line">  var tmp = ...;</div><div class="line">  ...</div><div class="line">&#125;());</div><div class="line"></div><div class="line">// 块级作用域写法</div><div class="line">&#123;</div><div class="line">  let tmp = ...;</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>下面的代码如果使用var  输出的是 10<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = [];</div><div class="line">for (var i = 0; i &lt; 10; i++) &#123;</div><div class="line">  a[i] = function () &#123;</div><div class="line">    console.log(i);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">a[6](); // 10</div></pre></td></tr></table></figure></p>
+<p>如果使用<code>let</code>，声明的变量仅在块级作用域内有效，最后输出的是6。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = [];</div><div class="line">for (let i = 0; i &lt; 10; i++) &#123;</div><div class="line">a[i] = function () &#123;</div><div class="line">    console.log(i);</div><div class="line">&#125;;</div><div class="line">&#125;</div><div class="line">a[6](); // 6</div></pre></td></tr></table></figure>
+<h6 id="不存在变量提"><a href="#不存在变量提" class="headerlink" title="不存在变量提"></a>不存在变量提</h6><p>let不像var那样会发生“变量提升”现象。所以，变量一定要在声明后使用，否则报错。</p>
+<h6 id="变量不允许重复声明"><a href="#变量不允许重复声明" class="headerlink" title="变量不允许重复声明"></a>变量不允许重复声明</h6><p><code>let</code>不允许在相同作用域内，重复声明同一个变量。</p>
+<h4 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h4><h6 id="直接赋值"><a href="#直接赋值" class="headerlink" title="直接赋值"></a>直接赋值</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var [a, b, c] = [1, 2, 3];</div></pre></td></tr></table></figure>
+<ol>
+<li>Set 赋值 </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let [x, y, z] = new Set([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]);</div></pre></td></tr></table></figure>
+<h6 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h6><p>如果一个数组成员不严格等于undefined，默认值是不会生效的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let [x, y = &apos;b&apos;] = [&apos;a&apos;, undefined];</div><div class="line">console.log(x,y)</div></pre></td></tr></table></figure>
+<p>如果一个数组成员是null，默认值就不会生效，因为null不严格等于undefined。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var [x = 1] = [undefined];</div><div class="line">x // 1</div><div class="line"></div><div class="line">var [x = 1] = [null];</div><div class="line">x // null</div></pre></td></tr></table></figure></p>
+<p>默认值可以引用解构赋值的其他变量，但该变量必须已经声明。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let [x = 1, y = x] = [];     // x=1; y=1</div><div class="line">let [x = 1, y = x] = [2];    // x=2; y=2</div><div class="line">let [x = 1, y = x] = [1, 2]; // x=1; y=2</div><div class="line">let [x = y, y = 1] = [];     // ReferenceError</div></pre></td></tr></table></figure>
+<h6 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var &#123; foo: foo, bar: bar &#125; = &#123; foo: &quot;aaa&quot;, bar: &quot;bbb&quot; &#125;;</div></pre></td></tr></table></figure>
+<p>对象的解构也可以指定默认值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var &#123;x = 3&#125; = &#123;&#125;;</div><div class="line">x // 3</div><div class="line"></div><div class="line">var &#123;x, y = 5&#125; = &#123;x: 1&#125;;</div><div class="line">x // 1</div><div class="line">y // 5</div><div class="line"></div><div class="line">var &#123; message: msg = &quot;Something went wrong&quot; &#125; = &#123;&#125;;</div><div class="line">msg // &quot;Something went wrong&quot;</div></pre></td></tr></table></figure></p>
+<p>现有对象方法赋值到某个变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let &#123; log, sin, cos &#125; = Math;</div></pre></td></tr></table></figure>
+<p>解析出来的结果类似 <a href="http://babeljs.io/repl/#?evaluate=true&amp;lineWrap=false&amp;presets=es2015%2Cstage-0&amp;code=let%20%7B%20log%2C%20sin%2C%20cos%20%7D%20%3D%20Math%3B" target="_blank" rel="external">代码</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot;use strict&quot;;</div><div class="line">var log = Math.log;</div><div class="line">var sin = Math.sin;</div><div class="line">var cos = Math.cos;</div></pre></td></tr></table></figure></p>
+<h6 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a>字符串的解构赋值</h6><p>字符串也可以解构赋值。这是因为此时，字符串被转换成了一个类似数组的对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">const [a, b, c, d, e] = &apos;hello&apos;;</div><div class="line">a // &quot;h&quot;</div><div class="line">b // &quot;e&quot;</div><div class="line">c // &quot;l&quot;</div><div class="line">d // &quot;l&quot;</div><div class="line">e // &quot;o&quot;</div></pre></td></tr></table></figure></p>
+<p>类似数组的对象都有一个length属性，因此还可以对这个属性解构赋值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let &#123;length : len&#125; = &apos;hello&apos;;</div><div class="line">len // 5</div></pre></td></tr></table></figure>
+<h6 id="数值和布尔值的解构赋值"><a href="#数值和布尔值的解构赋值" class="headerlink" title="数值和布尔值的解构赋值"></a>数值和布尔值的解构赋值</h6><p>解构赋值时，如果等号右边是数值和布尔值，则会先转为对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let &#123;toString: s&#125; = 123;</div><div class="line">s === Number.prototype.toString // true</div><div class="line"></div><div class="line">let &#123;toString: s&#125; = true;</div><div class="line">s === Boolean.prototype.toString // true</div></pre></td></tr></table></figure></p>
+<h6 id="函数参数的解构赋值"><a href="#函数参数的解构赋值" class="headerlink" title="函数参数的解构赋值"></a>函数参数的解构赋值</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function add([x, y])&#123;</div><div class="line">return x + y;</div><div class="line">&#125;</div><div class="line">add([1, 2]); // 3</div></pre></td></tr></table></figure>
+<h4 id="解构赋值用途"><a href="#解构赋值用途" class="headerlink" title="解构赋值用途"></a>解构赋值用途</h4><h6 id="交换变量的值"><a href="#交换变量的值" class="headerlink" title="交换变量的值"></a>交换变量的值</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[x, y] = [y, x];</div></pre></td></tr></table></figure>
+<h6 id="从函数返回多个值"><a href="#从函数返回多个值" class="headerlink" title="从函数返回多个值"></a>从函数返回多个值</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">    // 返回一个数组</div><div class="line">    function example() &#123;</div><div class="line">    return [1, 2, 3];</div><div class="line">    &#125;</div><div class="line">    var [a, b, c] = example();</div><div class="line"></div><div class="line">    // 返回一个对象</div><div class="line">    function example() &#123;</div><div class="line">    return &#123;</div><div class="line">        foo: 1,</div><div class="line">        bar: 2</div><div class="line">    &#125;;</div><div class="line">    &#125;</div><div class="line">    var &#123; foo, bar &#125; = example();</div><div class="line">``` </div><div class="line"></div><div class="line">###### 函数参数的定义</div></pre></td></tr></table></figure>
+<pre><code>// 参数是一组有次序的值
+function f([x, y, z]) { ... }
+f([1, 2, 3]);
+
+// 参数是一组无次序的值
+function f({x, y, z}) { ... }
+f({z: 3, y: 2, x: 1});
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### 提取JSON数据</div></pre></td></tr></table></figure>
+<pre><code>var jsonData = {
+id: 42,
+status: &quot;OK&quot;,
+data: [867, 5309]
+};
+
+let { id, status, data: number } = jsonData;
+
+console.log(id, status, number);
+// 42, &quot;OK&quot;, [867, 5309]
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### 遍历Map结构</div></pre></td></tr></table></figure>
+<pre><code>var map = new Map();
+map.set(&apos;first&apos;, &apos;hello&apos;);
+map.set(&apos;second&apos;, &apos;world&apos;);
+
+for (let [key, value] of map) {
+console.log(key + &quot; is &quot; + value);
+}
+// first is hello
+// second is world
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">如果只想获取键名，或者只想获取键值，可以写成下面这样。</div></pre></td></tr></table></figure>
+<pre><code>// 获取键名
+for (let [key] of map) {
+// ...
+}
+
+// 获取键值
+for (let [,value] of map) {
+// ...
+}
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">##### 字符串的扩展</div><div class="line"></div><div class="line">传统上，JavaScript只有indexOf方法，可以用来确定一个字符串是否包含在另一个字符串中。ES6又提供了三种新方法。</div><div class="line"></div><div class="line">######  includes()  </div><div class="line">返回布尔值，表示是否找到了参数字符串。</div></pre></td></tr></table></figure>
+<p>var s = ‘Hello world!’;</p>
+<p>if(s.includes(‘ld’)) {<br>    console.log(1)<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### startsWith() </div><div class="line">返回布尔值，表示参数字符串是否在源字符串的头部。</div></pre></td></tr></table></figure></p>
+<p> s.endsWith(‘!’) // true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### endsWith()</div><div class="line">返回布尔值，表示参数字符串是否在源字符串的尾部。</div></pre></td></tr></table></figure></p>
+<pre><code>s.endsWith(&apos;!&apos;) // true
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">这三个方法都支持第二个参数，表示`开始`搜索的位置。</div></pre></td></tr></table></figure>
+<pre><code>const s = &apos;Hello world!&apos;;
+s.startsWith(&apos;world&apos;, 6) // true
+s.endsWith(&apos;Hello&apos;, 5);  // true
+s.endsWith(&apos;Hell&apos;, 4);   // true
+s.includes(&apos;Hello&apos;, 6)   // false 
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">###### 字符串模板</div></pre></td></tr></table></figure>
+<pre><code>// 字符串中嵌入变量
+let name = &quot;Bob&quot;, time = &quot;today&quot;;
+console.log(`Hello ${name}, how are you ${time}?`)
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">模板字符串都是用  **`**</div><div class="line">也可以用来调用函数</div></pre></td></tr></table></figure>
+<p>function add() {<br>  console.log(1222);<br>}<br>let str = <code>Nihai ${add()}</code>;<br>```</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;配置文件-babelrc&quot;&gt;&lt;a href=&quot;#配置文件-babelrc&quot; class=&quot;headerlink&quot; title=&quot;配置文件.babelrc&quot;&gt;&lt;/a&gt;配置文件.babelrc&lt;/h5&gt;&lt;p&gt;Babel的配置文件是.babelrc，存放在项目的根目录下
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="ES6" scheme="https://hyb628.github.io/tags/ES6/"/>
+    
+      <category term="JavaScript" scheme="https://hyb628.github.io/tags/JavaScript/"/>
+    
+      <category term="数值" scheme="https://hyb628.github.io/tags/%E6%95%B0%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>阶段性技术啰嗦（一）</title>
     <link href="https://hyb628.github.io/2016/05/20/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%8A%80%E6%9C%AF%E5%95%B0%E5%97%A61/"/>
     <id>https://hyb628.github.io/2016/05/20/阶段性技术啰嗦1/</id>
     <published>2016-05-20T06:26:24.000Z</published>
-    <updated>2017-04-29T04:15:48.000Z</updated>
+    <updated>2017-04-29T08:31:42.000Z</updated>
     
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=17579515&auto=1&height=66"></iframe>
 
 <p>听听有情怀的歌，陶冶情操！大学很爱的一首歌。</p>
 <p>又到周五了，趁现在下班时间，抽空写写最近在公司遇到的坑以及学到的东西吧，最近一直很少做自己的技术总结，老是写生活随笔啥的似乎也不符合我这个愤青的年龄 。看到我都觉得我活在小康社会似的，我都快不相信自己了。</p>
-<p>最近一直在做支付项目，公司用到了百度ECUI的一个MVC框架，配合ETpl模板引擎，后台是Java语言，开始做<a href="http://2014.jsconf.cn/slides/herman-taobaoweb/#/1" target="_blank">前后端分离</a>。</p>
+<p>最近一直在做支付项目，公司用到了百度ECUI的一个MVC框架，配合<code>ETpl模板引擎</code>，后台是Java语言，开始做<a href="http://2014.jsconf.cn/slides/herman-taobaoweb/#/1" target="_blank" rel="external">前后端分离</a></p>
 <p>毕竟第一次做，难免有些紧张。(~.~)，讲讲几个遇到的问题以及解决办法吧，俗话说，找到合适的途径 合适的方法才是做重要的。因为在公司没写完就回来了，所以深夜还是继续写，当日事当日毕。</p>
-<p><strong>说说ETpl吧</strong>，一个百度模板引擎，虽然用到人不是很多，但是大致还是一样的吧 通用模板都是大致类似，一开始遇到的问题还是挺多的，因为模板在项目或者是组件都是很多封装或者是写好的，需要什么就哪来用，不过，多多少少还是会有问题的，比如兼容性或者是可能这个组件不适用今后的产品升级，那就需要更新这个组件，但是你会发现，组件是很多地方在通用，所以你很多东西你不能乱动的，就怕会牵一发而动全身。</p>
+<h5 id="ETpl"><a href="#ETpl" class="headerlink" title="ETpl"></a>ETpl</h5><p>说说ETpl吧，一个百度模板引擎，虽然用到人不是很多，但是大致还是一样的吧 通用模板都是大致类似，一开始遇到的问题还是挺多的，因为模板在项目或者是组件都是很多封装或者是写好的，需要什么就哪来用，不过，多多少少还是会有问题的，比如兼容性或者是可能这个组件不适用今后的产品升级，那就需要更新这个组件，但是你会发现，组件是很多地方在通用，所以你很多东西你不能乱动的，就怕会牵一发而动全身。</p>
 <p>但是这不是我要考虑的事情，我要做的就是把功能做好，或者做出来吧 现阶段。先熟悉熟悉框架或者是别人的代码，一开始没啥经验，也没比较全面的文档，或者是教程，很多都是需要你去看别人的代码或者是代码去运行了你才能懂这个功能到底是干嘛用的。刚开始前几天确实没头绪，蒙了，有点想放弃，但是想想别人大都是这么过来的，自己就是吃翔也得坚持下来对吧?</p>
-<p>ECUI说是实现MVC的一些业务实现控件化，就是希望做到每个功能能够组件化吧。不过写组件的我都觉得很佩服，是我需要学习的前辈们。</p>
+<h5 id="ECUI"><a href="#ECUI" class="headerlink" title="ECUI"></a>ECUI</h5><p>ECUI实现MVC的一些业务实现控件化，就是希望做到每个功能能够组件化吧。不过写组件的我都觉得很佩服，是我需要学习的前辈们。</p>
 <p>入职第一天，我的导师—— 我的师傅，挺不错的，我见过的很勤奋的一个女前端，得叫全栈，因为他们都是Java转的前端，来抢前端的饭碗的女中豪杰，还有超哥和浩哥都是这里的一员。吃饭都是各成一派，我要是想吃面食就跟浩哥走，想吃盖饭啥的就跟超哥走。就是这么随波逐流，没办法。</p>
 <p>一开始，需要知道的东西比较多，所以比较乱，毕竟从外包公司出来的，所以很多东西还是比较不规范需要去加强学习的。先来说说Git吧，耳熟能详的东西。</p>
 <p>按照以往的做法，以往我们都是直接在Master提交代码，或者是SVN，那时候还不是命令那么高端，都是客户端可视化，所以直接更新或者是检出提交，所以总出现各种问题，在外包的时候，你需要跟着客户的节奏走，赶时间赶项目，时间一紧张就会频繁遇到问题。小项目还好，但是遇到大项目估计就不行了这种办法。</p>
-<p>来了公司之后，开始熟悉下运作流程，提交代码都是各种需要权限，我自己建一个分支，然后开始开发了，每次提交代码都需要别人的代码审核或者叫review，没问题给你通过代码审核，你可能push成功上去，不行就给你打回去，你就需要重新git reset 到成功的那个版本（changeId） ，假如通过了，那还不一定就完事了，代码是使用<em>Jenkin</em>s配置自动化构建，自动代码检查和压缩打包之类的，你得看是不是有报错，所以没问题才能继续通过SSH上传到开发环境。一开始我又蒙了，什么鬼啊这是？一直出问题，代码报错，因为你JS不书写规范或者是CSS 不书写规范都会构建不成功（比如function后面需要空格或者是改空格就空格，分号啥的都要按照书写规范，一开始有个功能用到Tab切换，我用到的时候闭包去写切换，然后又是报错，我实在没辙了），最后师傅叫我安装本地的JSSLint 和 CSSLint ，OK 安装就安装呗，没想到，又是遇到问题来了。我之前Sublime安装了各种插件，所以一直安装不成功，因为公司用的CSSLint 和 JSLint 的校验包都是有了，我需要用Node安装着两个，然后替换这两个文件夹，后台我把我心爱的插件都删了，重新安装了CSSLint 和 JSLint 就可以了，真是纠结死我了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.安装nodejs最新版本，通过nodejs指令 cmd下执行npm install -g xxx分别安装jslint与csslint</div><div class="line">  npm install -g jslint</div><div class="line">  npm install -g csslint</div><div class="line">2.安装Sublime Text 3(推荐，也可以安装别的工具)，安装Package Control</div><div class="line">3.通过Package Control安装SublimeLinter/SublimeLinter-contrib-jslint/SublimeLinter-csslint</div><div class="line">  ctrl + shift + p---&amp;gt;install package</div><div class="line">4.执行jslint找到jslint的安装目录的父目录，使用我提供的jslint/csslint包覆盖掉原来的jslint与csslint</div></pre></td></tr></table></figure></p>
-<p>安装完这两个东西，把所有的文件报错都修改了 ，再Git命令push <a href="http://baike.baidu.com/link?url=ZcpZRrQlP-BimkDffgoLvXIPG3C4HxtSiomyVF-fnAiLVbtNwVqMPX1l8gmJDtVyiM2LqMbAgUbYHzciUYP4Ha" target="_blank">review</a> 进行审核，哦哦，原来如此，不过真是折腾死宝宝 了(づ｡◕‿‿◕｡)づ  我不能放弃吃药才行！</p>
-<h6 id="说说Fiddler代理吧："><a href="#说说Fiddler代理吧：" class="headerlink" title="说说Fiddler代理吧："></a>说说Fiddler代理吧：</h6><p>也是知道原来用这个来做前后端分离，假如后台是Java或者是项目是基于后台的Java 我就想到头疼的需要各种配置后台环境，用Fiddler 写正则判断，实现本地走代理，不过需要配置本地的HOST文件。</p>
-<p><pre><code>regex:<a><a href="http://web.binjs.com/(.*).(html|js|css|less|js_|jpg|png)(\?[a-zA-Z0-9]+=[0-9A-Za-z]*)?$" target="_blank" rel="external">http://web.binjs.com/(.*).(html|js|css|less|js_|jpg|png)(\?[a-zA-Z0-9]+=[0-9A-Za-z]*)?$</a></a></code></pre><br>这样我就把需要的资源就不走外网直接走本地，不过https链接本地打开的话每次都提示证书问题确实比价烦，需要把s去掉就好，第一次资源加载进来在打开代理加载规则，加上用用框架的，视图层 和 数据逻辑都分开配合使用，加上ECUI的路由addRoute 控制实现类似单页面的不刷新页面跳转差不多这个意思。也可以用callRoute调用路由，哦哦，原来这样啊。</p>
+<p>来了公司之后，开始熟悉下运作流程，提交代码都是各种需要权限，我自己建一个分支，然后开始开发了，每次提交代码都需要别人的代码审核或者叫review，没问题给你通过代码审核，你可能push成功上去，不行就给你打回去，你就需要重新git reset 到成功的那个版本（changeId） ，假如通过了，那还不一定就完事了，代码是使用<em>Jenkin</em>s配置自动化构建，自动代码检查和压缩打包之类的，你得看是不是有报错，所以没问题才能继续通过SSH上传到开发环境。一开始我又蒙了，什么鬼啊这是？一直出问题，代码报错，因为你JS不书写规范或者是CSS 不书写规范都会构建不成功（比如function后面需要空格或者是改空格就空格，分号啥的都要按照书写规范，一开始有个功能用到Tab切换，我用到的时候闭包去写切换，然后又是报错，我实在没辙了），最后师傅叫我安装本地的JSSLint 和 CSSLint ，OK 安装就安装呗，没想到，又是遇到问题来了。我之前Sublime安装了各种插件，所以一直安装不成功，因为公司用的CSSLint 和 JSLint 的校验包都是有了，我需要用Node安装着两个，然后替换这两个文件夹，后台我把我心爱的插件都删了，重新安装了CSSLint 和 JSLint 就可以了，真是纠结死我了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.安装nodejs最新版本，通过nodejs指令 cmd下执行npm install -g xxx分别安装jslint与csslint</div><div class="line">npm install -g jslint</div><div class="line">npm install -g csslint</div><div class="line">2.安装Sublime Text 3(推荐，也可以安装别的工具)，安装Package Control</div><div class="line">3.通过Package Control安装SublimeLinter/SublimeLinter-contrib-jslint/SublimeLinter-csslint</div><div class="line">  ctrl + shift + p---&amp;gt;install package</div><div class="line">4.执行jslint找到jslint的安装目录的父目录，使用我提供的jslint/csslint包覆盖掉原来的jslint与csslint</div></pre></td></tr></table></figure>
+<p>安装完这两个东西，把所有的文件报错都修改了 ，再Git命令push,review进行审核，哦哦，原来如此，不过真是折腾死宝宝 了(づ｡◕‿‿◕｡)づ  我不能放弃吃药才行！</p>
+<h5 id="Fiddler代理"><a href="#Fiddler代理" class="headerlink" title="Fiddler代理"></a>Fiddler代理</h5><p>也是知道原来用这个来做前后端分离，假如后台是Java或者是项目是基于后台的Java 我就想到头疼的需要各种配置后台环境，用Fiddler 写正则判断，实现本地走代理，不过需要配置本地的HOST文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">regex:https://hyb628.github.io/(.*).(html|js|css|less|js_|jpg|png)(\?[a-zA-Z0-9]+=[0-9A-Za-z]*)?$</div></pre></td></tr></table></figure>
+<p>这样我就把需要的资源就不走外网直接走本地，不过https链接本地打开的话每次都提示证书问题确实比价烦，需要把s去掉就好，第一次资源加载进来在打开代理加载规则，加上用用框架的，视图层 和 数据逻辑都分开配合使用，加上ECUI的路由addRoute 控制实现类似单页面的不刷新页面跳转差不多这个意思。也可以用callRoute调用路由，哦哦，原来这样啊。</p>
 <p>前端交互之前一直没在做这块，所以，后端专心写他们的接口就好了，前端也不用去管他们用什么环境，前端该怎么开发就怎么开发，完全独立出来。各自负责自己的业务吧。</p>
 <p>后台写好接口需要前后端联调，好吧，我确实没做过这块，所以，又得跟后台大哥去做配合联调，一开始可能他们写的接口有问题那就慢慢对接，我照样开发，我需要什么参数叫后台给我提供好，或者看需求文档，不过，需求文档这东西，要是产品经理写的没那么详细，那估计你又得去撩妹，找找她们说说哪里不行怎么做好了。也很费神。</p>
 <p>需求文档包含埋点的增加，就是类似数据监控吧。我开发完才去加这些 不过还算简单，期间，PPT和PSD 都给到你了，不过PSD比较不好找，估计时间比较赶吧设计师，有点糙，不过也没事，反正我是切图仔，专业抠图20年（顺带抠脚）。</p>
 <p>开发完一个功能，因为涉及到跟JSP的页面跳转，因为毕竟可能有些老代码的话那就不可能一下子都改革过来都是慢慢更新迭代，就涉及到比如页面的跳转，也是需要用路由的方式，发个请求跟JSP那个大哥协商好发什么东西给他我页面才能跳转到正确页面，也蛮有意思的。</p>
-<p>再来说说</p>
-<h6 id="SSH-（Xshell）-的代码部署吧："><a href="#SSH-（Xshell）-的代码部署吧：" class="headerlink" title="SSH （Xshell） 的代码部署吧："></a>SSH （Xshell） 的代码部署吧：</h6><p>我通过Jenkins 构建成功的话，需要进行打包，因为一开始构建我遇到一直打包不成功的问题，后来各种找问题，才发现我的LESS文件里面import了其他功能的LESS ，导致那个文件编译了，我的LESS就被output 丢弃了。所以搞得我都直播吃翔了。一开始以为LESS书写不规范或者是哪里问题，各种修改，各种蛋疼，就取消嵌套规则，结果还是不行，后台请教了文浩大哥，他第二天早上去看了看打包工具的源码，才发现是我的import问题，删掉结果就成功了，那时候，感动的鼻涕鼻屎都快出来了（没那么夸张，有点夸张，就是比较激动吧）。</p>
+<h5 id="SSH-（Xshell）代码部署"><a href="#SSH-（Xshell）代码部署" class="headerlink" title="SSH （Xshell）代码部署"></a>SSH （Xshell）代码部署</h5><p>我通过Jenkins 构建成功的话，需要进行打包，因为一开始构建我遇到一直打包不成功的问题，后来各种找问题，才发现我的LESS文件里面import了其他功能的LESS ，导致那个文件编译了，我的LESS就被output 丢弃了。所以搞得我都直播吃翔了。一开始以为LESS书写不规范或者是哪里问题，各种修改，各种蛋疼，就取消嵌套规则，结果还是不行，后台请教了文浩大哥，他第二天早上去看了看打包工具的源码，才发现是我的import问题，删掉结果就成功了，那时候，感动的鼻涕鼻屎都快出来了（没那么夸张，有点夸张，就是比较激动吧）。</p>
 <p>成功后，下载打包成功的代码包，准备部署到测试环境了，这下师傅跟我说你用Xshell工具进行部署，问我会不会LINUX的一些命令，我这下又懵逼了，我说不会，我说你演示我看看，我记一下，结果，上面很多文件夹还是有权限的，一开始给我部署时候，进行代码全部覆盖，其实我都看不懂，比较笨呗，最后，暗自下决心开始学习基本命令，因为Mac几个简单命令还是稍微知道，要是这种 .tar.gz 打包好，先rz命令上传文件包，上传然后用 -zxvf   web-fe-XXXX.tar.gz ( Tab键可补全文件名)   解压文件，然后再改改一个配置文件，就好了，第二天，我做了笔记自己尝试了下，觉得还行，像文件的删除，移动，或者是解压命令用几次就熟悉啦。也就能实现自己去部署代码啦。</p>
-<p>######浅谈提测：</p>
-<p>以前写代码，假如有测试人员，貌似都是后台部署然后测试进行测试吧，怎么测试我就不懂啦。现在需要做的就是进行提交测试申请，加入后端写接口的 他们也自己提交自己的测试申请，前端自己开发的提交自己Git分支的测试申请，通过网站，把构建好的源码包上传，还有需要写README文件，大致内容告诉测试人员提测点，需要测试哪些功能，他们好进行测试，还有就是你修改的哪些文件，这样他们测试的时候，直接抓取那个修改的文件过来就好，不至于整个项目进行替换，还有自己也写写备注自己修改了哪些文件，自己好知道。还有重要的一点就是，写提测点文件需要附上后台接口地址这样他们测试人员好对照接口进行测试，还有，因为埋点前端自己加，所以加了哪些也得提测前写到通用的线上文档里面，写完了测试申请说明和文件就提交上去啦，只是第一轮提测，期间测试人员通过禅道进行测试Bug反馈，不过，我拿到我的禅道账号打开一看，再次懵逼了，里面的项目多的我都找不到我的项目属于哪个，最后才知道我需要问问测试人员测试项目的版本号，每进行一个小功能测试都有测试版本号，加入这个版本号测试完了，你去修改Bug 改完了后继续提交第二轮测试，貌似好几轮测试。都不容易啊。<del>~~(&gt;_&lt;)</del>~~</p>
-<h6 id="浅谈Bug："><a href="#浅谈Bug：" class="headerlink" title="浅谈Bug："></a>浅谈Bug：</h6><p>说下遇到的一个之前没遇到过的Bug吧，就是tbody用JS的innerHTML插入，在IE9- 不支持，因为IE的只读模式所以出现未知的报错， [<a href="http://stackoverflow.com/questions/4729644/cant-set-innerhtml-on-tbody-in-ie" target="_blank">问题描述</a>]， 尝试后发现过于复杂并且不使用这个模板渲染方式，所以最后不得不换用li 标签之类的修改。加上模板引擎就不好做处理，所以需要谨慎用table标签吧。</p>
+<h5 id="CO提测"><a href="#CO提测" class="headerlink" title="CO提测"></a>CO提测</h5><p>以前写代码，假如有测试人员，貌似都是后台部署然后测试进行测试吧，怎么测试我就不懂啦。现在需要做的就是进行提交测试申请，加入后端写接口的 他们也自己提交自己的测试申请，前端自己开发的提交自己Git分支的测试申请，通过网站，把构建好的源码包上传，还有需要写README文件，大致内容告诉测试人员提测点，需要测试哪些功能，他们好进行测试，还有就是你修改的哪些文件，这样他们测试的时候，直接抓取那个修改的文件过来就好，不至于整个项目进行替换，还有自己也写写备注自己修改了哪些文件，自己好知道。还有重要的一点就是，写提测点文件需要附上后台接口地址这样他们测试人员好对照接口进行测试，还有，因为埋点前端自己加，所以加了哪些也得提测前写到通用的线上文档里面，写完了测试申请说明和文件就提交上去啦，只是第一轮提测，期间测试人员通过禅道进行测试Bug反馈，不过，我拿到我的禅道账号打开一看，再次懵逼了，里面的项目多的我都找不到我的项目属于哪个，最后才知道我需要问问测试人员测试项目的版本号，每进行一个小功能测试都有测试版本号，加入这个版本号测试完了，你去修改Bug 改完了后继续提交第二轮测试，貌似好几轮测试。都不容易啊。<del>~~(&gt;_&lt;)</del>~~</p>
+<h5 id="浅谈Bug"><a href="#浅谈Bug" class="headerlink" title="浅谈Bug"></a>浅谈Bug</h5><p>说下遇到的一个之前没遇到过的Bug吧，就是tbody用JS的innerHTML插入，在IE9- 不支持，因为IE的只读模式所以出现未知的报错， <a href="http://stackoverflow.com/questions/4729644/cant-set-innerhtml-on-tbody-in-ie" target="_blank" rel="external">问题描述</a>， 尝试后发现过于复杂并且不使用这个模板渲染方式，所以最后不得不换用li 标签之类的修改。加上模板引擎就不好做处理，所以需要谨慎用table标签吧。</p>
 <p>涉及到的知识点有： 加入我用callRoute调用路由的方式进行页面的参数附带在浏览器上数据重新渲染，那还好，但是，我实现的是JS的重新渲染数据，所以这里就遇到瓶颈，纠结了一晚上最后还是决定改标签了。数据逻辑还是需要考虑全面一点才行。</p>
-<p>今天例会，师傅老大说，看我现在手头项目也差不多好了，就说叫我下周开始学习React  + Webpack ，新项目会用到吧，正好我也想研究点新东西加上项目实践。然后ECUI项目边弄吧。</p>
-<p>决不能让自己闲下来，笨鸟。</p>
+<p>今天例会，师傅老大说，看我现在手头项目也差不多好了，就说叫我下周开始学习<code>React</code>  + <code>Webpack</code> ，新项目会用到吧，正好我也想研究点新东西加上项目实践。然后ECUI项目边弄吧。</p>
 <p>明天团建得早起，2天时间得忙咯，貌似去北京郊外玩玩，顺带爬爬山。好久没去走走了，快枯萎了。晚安。</p>
-<p style="text-align: right;"><strong>Bing  2016.5.20</strong></p>]]></content>
+]]></content>
     
     <summary type="html">
     
