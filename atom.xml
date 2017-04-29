@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hyb628.github.io/"/>
-  <updated>2017-04-29T03:31:28.000Z</updated>
+  <updated>2017-04-29T04:03:15.000Z</updated>
   <id>https://hyb628.github.io/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>ES6的Array.from、Set数组去重</title>
-    <link href="https://hyb628.github.io/2017/04/26/ES6%E7%9A%84Array.from%E3%80%81Set%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
-    <id>https://hyb628.github.io/2017/04/26/ES6的Array.from、Set数组去重/</id>
-    <published>2017-04-26T06:26:24.000Z</published>
-    <updated>2017-04-29T03:31:28.000Z</updated>
+    <link href="https://hyb628.github.io/2016/09/14/ES6%E7%9A%84Array.from%E3%80%81Set%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
+    <id>https://hyb628.github.io/2016/09/14/ES6的Array.from、Set数组去重/</id>
+    <published>2016-09-14T06:26:24.000Z</published>
+    <updated>2017-04-29T04:03:15.000Z</updated>
     
     <content type="html"><![CDATA[<h5 id="Set数据结构"><a href="#Set数据结构" class="headerlink" title="Set数据结构"></a>Set数据结构</h5><p>ES6中新增了Set数据结构，类似于数组，但是 它的成员都是唯一的 ，其构造函数可以接受一个数组作为参数，如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(array);</div><div class="line"><span class="built_in">console</span>.log(set);</div><div class="line"><span class="comment">// =&gt; Set &#123;1, 2, 3, 4, 5&#125;</span></div></pre></td></tr></table></figure>
@@ -36,12 +36,121 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://hyb628.github.io/categories/JavaScript/"/>
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
       <category term="ES6" scheme="https://hyb628.github.io/tags/ES6/"/>
     
       <category term="数组去重" scheme="https://hyb628.github.io/tags/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阶段性技术啰嗦（二）</title>
+    <link href="https://hyb628.github.io/2016/09/03/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%8A%80%E6%9C%AF%E5%95%B0%E5%97%A62/"/>
+    <id>https://hyb628.github.io/2016/09/03/阶段性技术啰嗦2/</id>
+    <published>2016-09-03T06:26:24.000Z</published>
+    <updated>2017-04-29T04:16:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>记得上次<a href="/2016/05/20/阶段性技术啰嗦1/">阶段性啰嗦</a>是在5月份，转眼间，就到九月了，时间过的好快，又过得好漫长，两点一线的生活，充实的生活，也懒到了一定的境界，甚是乏累。今天公司网络升级改造，所以早早就回来，就想起写点啥，虽然经验少，肚子里没墨水也想挣扎一番。Let me see ! </p>
+</blockquote>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=436514312&auto=1&height=66"></iframe>
+
+<p><strong>说下最近都在忙啥吧：</strong><br>七月份开始一直到现在一直在弄Approve项目，推迟了上线时间，因为尝试用了React新框架，遇到的问题也挺多了，禅道的Bug可真不是一般的多的。所以，一直解决Bug中。负责这个项目的我们三个人就这么Coding。说到底，项目逻辑的复杂度不是一般的复杂。刚毕业那会工作，主要前端开发的一般偏向UI方面，所以，交互，数据方面一般处理的比较少甚至基本都是交于后端处理，这方面比较薄弱，经过以前的面试洗礼，有个面试官说，我们只要做JS交互方面的，才下定决心一定要坚持在这方向努力学习才行。不过，也很感叹，一开始以为切切图的码畜，原来常挂嘴里的切图，自从遇到了公司了一位设计转UI切图的资深女同事才发现，原来切图人家真的到了一定的境界，让我好生佩服。</p>
+<p><strong>说说最近的一些问题：</strong><br>刚开始我们老大说项目重构，要用React，所以，很正常，很多人肯定没接触了，都要从0开始，毕竟，在Ag横行的年代，也是还是有一些牛逼的技术栈并行。记得6月份就说要用了，然后自己也看了FB官网的API，东西也不多，但是，React 只是负责V层面上的东西，伴随它有用的东西就一个<code>state</code>和<code>props</code>, 以及一些<code>生命周期</code>，在<code>React中，数据的流向是单向的</code>，基于<code>react + redux</code>的模式开发配合着ES6（ES6很多东西写着确实不错，就那么些，Babel就帮你搞定了，加上Webpack可以把你代码转为兼容低版本的ES3或者是ES5之类的代码）就这么孕育而生。</p>
+<h5 id="Redux-官网"><a href="#Redux-官网" class="headerlink" title="Redux 官网"></a>Redux <a href="http://redux.js.org/" target="_blank" rel="external">官网</a></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. store 是应用的状态管理中心，保存着是应用的状态（state），当收到状态的更新时，会触发视觉组件进行更新。</div><div class="line">2. container 是视觉组件的容器，负责把传入的状态变量渲染成视觉组件，在浏览器显示出来。</div><div class="line">3. reducer 是动作(action)的处理中心， 负责处理各种动作并产生新的状态（state），返回给store。</div></pre></td></tr></table></figure>
+<h5 id="nvm-Github"><a href="#nvm-Github" class="headerlink" title="nvm Github"></a>nvm <a href="https://github.com/creationix/nvm" target="_blank" rel="external">Github</a></h5><p>我Mac是直接用了nvm进行node版本的控制，切换node版本的时候 是直接 <code>nvm use 6.2.1</code>  或者是 <code>nvm use 4.4.5</code> 之类的不同版本切换，如果需要用到的情况下。不过也有其他东西类似的版本控制。</p>
+<h5 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h5><p>历时将近6年的时间来制定的新 ECMAScript 标准 ECMAScript 6（亦称 ECMAScript Harmony，简称 ES6）终于在 2015 年 6 月正式发布。自从上一个标准版本 ES5 在 2009 年发布以后，ES6 就一直以新语法、新特性的优越性吸引著众多 JavaScript 开发者，驱使他们积极尝鲜。</p>
+<p>阮一峰的<a href="http://es6.ruanyifeng.com/#docs/intro" target="_blank" rel="external">《ECMAScript 6 入门》</a><br>InfoQ上的 <a href="http://www.infoq.com/cn/ES6-In-Depth/articles/" target="_blank" rel="external">《深入浅出ES6》</a> </p>
+<p>一般都是都是看这两个 比较全， 不过一般用到才去看下或者查下，一般常用的就是箭头函数，或者是解构或者是新增加的一些方法，比较方便，比如<code>Object.assign()</code> 项目里也用的比较多，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Object.assign(target, ...sources)</div><div class="line">Object.assign() 方法可以把任意多个的源对象自身的可枚举属性拷贝给目标对象，然后返回目标对象。</div></pre></td></tr></table></figure>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="external">直接戳MDN</a></p>
+<p>类似的字符串模板也不过 比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">const names = `一喵呜`;</div><div class="line">console.log(`$&#123;names&#125; binjs.com`);</div><div class="line"></div><div class="line">result: 一喵呜 binjs.com</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Spread： </div><div class="line">export function getSelCCuser(options) &#123;</div><div class="line">    const &#123; approveId, ...others  &#125; = options;</div><div class="line">    return httpUtil.post(`/api/approve/w1/approves/$&#123;approveId&#125;/cc`,  &#123;...others&#125; );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const &#123; detail, name &#125; = this,props</div><div class="line">const &#123; names &#125; = this.state</div></pre></td></tr></table></figure>
+<p>还有比如，项目遇到一个前端模糊搜索匹配问题，想到正则比较麻烦，还好，想到ES6有<code>includes()</code> 这个东西，一切就好办了。</p>
+<p>之类的 等等，还是不错的。</p>
+<h5 id="Ant-Design-官网"><a href="#Ant-Design-官网" class="headerlink" title="Ant-Design 官网"></a>Ant-Design <a href="http://ant.design/" target="_blank" rel="external">官网</a></h5><p>项目UI基于蚂蚁金服的ant进行组件开发，项目里需要用到一个抽屉组件，一开始，真不知道怎么搞，不过，最后不知道怎么纠结，最后，把抽屉小组件写了整合进ant项目里，发布到npm，供以后公司项目其他项目模块重构可以服用，不过蚂蚁金服确实很赞，但是还是也还是遇到很多问题，真的操碎心。</p>
+<p>这几天，发现基于<code>React Nactive</code>的<code>mobile ant</code>组件出来了，虽然没用过不过还是很好奇的。<a href="http://mobile.ant.design/" target="_blank" rel="external">Mobile官网</a>  </p>
+<p>之前Leader说一人写几个组件，然后因为组件要整合的太多，因为React都是很多一个个小组件，UI样式也没，最后就直接用蚂蚁金服这个来复用开发，还有类似的很多 比如： <a href="http://amazeui.org/react/" target="_blank" rel="external">Amaze-UI</a> ， <a href="http://www.material-ui.com/#/" target="_blank" rel="external">Material-UI</a>，但后面这两个确实不行。哈。</p>
+<p>React 组件间的通信，纯粹自己理解就是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. 父级 --&gt; 子级 ： props</div><div class="line">2. 子级 --&gt; 父级： callback</div></pre></td></tr></table></figure></p>
+<h5 id="lodash-官网"><a href="#lodash-官网" class="headerlink" title="lodash 官网"></a>lodash <a href="https://lodash.com/docs/4.15.0/" target="_blank" rel="external">官网</a></h5><p>Approve项目还引入了一个工具库，算是对JS的一个扩充吧。有些API用着还是不错的。</p>
+<h5 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h5><p>Promise这个水好深，反正现在就是我只知道的理解就是异步的处理 ，<code>then</code>的类似回调。不过看了这篇文章还是太难过了。比较稚嫩 ， 抽根烟先去睡觉。后面好好学习。 再做补充。</p>
+<p>保存个书签：<br><a href="http://liubin.org/promises-book" target="_blank" rel="external">Promise迷你书（中文版）</a><br><a href="http://fex.baidu.com/blog/2015/07/we-have-a-problem-with-promises/" target="_blank" rel="external">[翻译] We have a problem with promises</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;记得上次&lt;a href=&quot;/2016/05/20/阶段性技术啰嗦1/&quot;&gt;阶段性啰嗦&lt;/a&gt;是在5月份，转眼间，就到九月了，时间过的好快，又过得好漫长，两点一线的生活，充实的生活，也懒到了一定的境界，甚是乏累。今天公司网络升级改造，所以早早就回来，就
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="ES6" scheme="https://hyb628.github.io/tags/ES6/"/>
+    
+      <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
+    
+      <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阶段性技术啰嗦（一）</title>
+    <link href="https://hyb628.github.io/2016/05/20/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%8A%80%E6%9C%AF%E5%95%B0%E5%97%A61/"/>
+    <id>https://hyb628.github.io/2016/05/20/阶段性技术啰嗦1/</id>
+    <published>2016-05-20T06:26:24.000Z</published>
+    <updated>2017-04-29T04:15:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=17579515&auto=1&height=66"></iframe>
+
+<p>听听有情怀的歌，陶冶情操！大学很爱的一首歌。</p>
+<p>又到周五了，趁现在下班时间，抽空写写最近在公司遇到的坑以及学到的东西吧，最近一直很少做自己的技术总结，老是写生活随笔啥的似乎也不符合我这个愤青的年龄 。看到我都觉得我活在小康社会似的，我都快不相信自己了。</p>
+<p>最近一直在做支付项目，公司用到了百度ECUI的一个MVC框架，配合ETpl模板引擎，后台是Java语言，开始做<a href="http://2014.jsconf.cn/slides/herman-taobaoweb/#/1" target="_blank">前后端分离</a>。</p>
+<p>毕竟第一次做，难免有些紧张。(~.~)，讲讲几个遇到的问题以及解决办法吧，俗话说，找到合适的途径 合适的方法才是做重要的。因为在公司没写完就回来了，所以深夜还是继续写，当日事当日毕。</p>
+<p><strong>说说ETpl吧</strong>，一个百度模板引擎，虽然用到人不是很多，但是大致还是一样的吧 通用模板都是大致类似，一开始遇到的问题还是挺多的，因为模板在项目或者是组件都是很多封装或者是写好的，需要什么就哪来用，不过，多多少少还是会有问题的，比如兼容性或者是可能这个组件不适用今后的产品升级，那就需要更新这个组件，但是你会发现，组件是很多地方在通用，所以你很多东西你不能乱动的，就怕会牵一发而动全身。</p>
+<p>但是这不是我要考虑的事情，我要做的就是把功能做好，或者做出来吧 现阶段。先熟悉熟悉框架或者是别人的代码，一开始没啥经验，也没比较全面的文档，或者是教程，很多都是需要你去看别人的代码或者是代码去运行了你才能懂这个功能到底是干嘛用的。刚开始前几天确实没头绪，蒙了，有点想放弃，但是想想别人大都是这么过来的，自己就是吃翔也得坚持下来对吧?</p>
+<p>ECUI说是实现MVC的一些业务实现控件化，就是希望做到每个功能能够组件化吧。不过写组件的我都觉得很佩服，是我需要学习的前辈们。</p>
+<p>入职第一天，我的导师—— 我的师傅，挺不错的，我见过的很勤奋的一个女前端，得叫全栈，因为他们都是Java转的前端，来抢前端的饭碗的女中豪杰，还有超哥和浩哥都是这里的一员。吃饭都是各成一派，我要是想吃面食就跟浩哥走，想吃盖饭啥的就跟超哥走。就是这么随波逐流，没办法。</p>
+<p>一开始，需要知道的东西比较多，所以比较乱，毕竟从外包公司出来的，所以很多东西还是比较不规范需要去加强学习的。先来说说Git吧，耳熟能详的东西。</p>
+<p>按照以往的做法，以往我们都是直接在Master提交代码，或者是SVN，那时候还不是命令那么高端，都是客户端可视化，所以直接更新或者是检出提交，所以总出现各种问题，在外包的时候，你需要跟着客户的节奏走，赶时间赶项目，时间一紧张就会频繁遇到问题。小项目还好，但是遇到大项目估计就不行了这种办法。</p>
+<p>来了公司之后，开始熟悉下运作流程，提交代码都是各种需要权限，我自己建一个分支，然后开始开发了，每次提交代码都需要别人的代码审核或者叫review，没问题给你通过代码审核，你可能push成功上去，不行就给你打回去，你就需要重新git reset 到成功的那个版本（changeId） ，假如通过了，那还不一定就完事了，代码是使用<em>Jenkin</em>s配置自动化构建，自动代码检查和压缩打包之类的，你得看是不是有报错，所以没问题才能继续通过SSH上传到开发环境。一开始我又蒙了，什么鬼啊这是？一直出问题，代码报错，因为你JS不书写规范或者是CSS 不书写规范都会构建不成功（比如function后面需要空格或者是改空格就空格，分号啥的都要按照书写规范，一开始有个功能用到Tab切换，我用到的时候闭包去写切换，然后又是报错，我实在没辙了），最后师傅叫我安装本地的JSSLint 和 CSSLint ，OK 安装就安装呗，没想到，又是遇到问题来了。我之前Sublime安装了各种插件，所以一直安装不成功，因为公司用的CSSLint 和 JSLint 的校验包都是有了，我需要用Node安装着两个，然后替换这两个文件夹，后台我把我心爱的插件都删了，重新安装了CSSLint 和 JSLint 就可以了，真是纠结死我了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.安装nodejs最新版本，通过nodejs指令 cmd下执行npm install -g xxx分别安装jslint与csslint</div><div class="line">  npm install -g jslint</div><div class="line">  npm install -g csslint</div><div class="line">2.安装Sublime Text 3(推荐，也可以安装别的工具)，安装Package Control</div><div class="line">3.通过Package Control安装SublimeLinter/SublimeLinter-contrib-jslint/SublimeLinter-csslint</div><div class="line">  ctrl + shift + p---&amp;gt;install package</div><div class="line">4.执行jslint找到jslint的安装目录的父目录，使用我提供的jslint/csslint包覆盖掉原来的jslint与csslint</div></pre></td></tr></table></figure></p>
+<p>安装完这两个东西，把所有的文件报错都修改了 ，再Git命令push <a href="http://baike.baidu.com/link?url=ZcpZRrQlP-BimkDffgoLvXIPG3C4HxtSiomyVF-fnAiLVbtNwVqMPX1l8gmJDtVyiM2LqMbAgUbYHzciUYP4Ha" target="_blank">review</a> 进行审核，哦哦，原来如此，不过真是折腾死宝宝 了(づ｡◕‿‿◕｡)づ  我不能放弃吃药才行！</p>
+<h6 id="说说Fiddler代理吧："><a href="#说说Fiddler代理吧：" class="headerlink" title="说说Fiddler代理吧："></a>说说Fiddler代理吧：</h6><p>也是知道原来用这个来做前后端分离，假如后台是Java或者是项目是基于后台的Java 我就想到头疼的需要各种配置后台环境，用Fiddler 写正则判断，实现本地走代理，不过需要配置本地的HOST文件。</p>
+<p><pre><code>regex:<a><a href="http://web.binjs.com/(.*).(html|js|css|less|js_|jpg|png)(\?[a-zA-Z0-9]+=[0-9A-Za-z]*)?$" target="_blank" rel="external">http://web.binjs.com/(.*).(html|js|css|less|js_|jpg|png)(\?[a-zA-Z0-9]+=[0-9A-Za-z]*)?$</a></a></code></pre><br>这样我就把需要的资源就不走外网直接走本地，不过https链接本地打开的话每次都提示证书问题确实比价烦，需要把s去掉就好，第一次资源加载进来在打开代理加载规则，加上用用框架的，视图层 和 数据逻辑都分开配合使用，加上ECUI的路由addRoute 控制实现类似单页面的不刷新页面跳转差不多这个意思。也可以用callRoute调用路由，哦哦，原来这样啊。</p>
+<p>前端交互之前一直没在做这块，所以，后端专心写他们的接口就好了，前端也不用去管他们用什么环境，前端该怎么开发就怎么开发，完全独立出来。各自负责自己的业务吧。</p>
+<p>后台写好接口需要前后端联调，好吧，我确实没做过这块，所以，又得跟后台大哥去做配合联调，一开始可能他们写的接口有问题那就慢慢对接，我照样开发，我需要什么参数叫后台给我提供好，或者看需求文档，不过，需求文档这东西，要是产品经理写的没那么详细，那估计你又得去撩妹，找找她们说说哪里不行怎么做好了。也很费神。</p>
+<p>需求文档包含埋点的增加，就是类似数据监控吧。我开发完才去加这些 不过还算简单，期间，PPT和PSD 都给到你了，不过PSD比较不好找，估计时间比较赶吧设计师，有点糙，不过也没事，反正我是切图仔，专业抠图20年（顺带抠脚）。</p>
+<p>开发完一个功能，因为涉及到跟JSP的页面跳转，因为毕竟可能有些老代码的话那就不可能一下子都改革过来都是慢慢更新迭代，就涉及到比如页面的跳转，也是需要用路由的方式，发个请求跟JSP那个大哥协商好发什么东西给他我页面才能跳转到正确页面，也蛮有意思的。</p>
+<p>再来说说</p>
+<h6 id="SSH-（Xshell）-的代码部署吧："><a href="#SSH-（Xshell）-的代码部署吧：" class="headerlink" title="SSH （Xshell） 的代码部署吧："></a>SSH （Xshell） 的代码部署吧：</h6><p>我通过Jenkins 构建成功的话，需要进行打包，因为一开始构建我遇到一直打包不成功的问题，后来各种找问题，才发现我的LESS文件里面import了其他功能的LESS ，导致那个文件编译了，我的LESS就被output 丢弃了。所以搞得我都直播吃翔了。一开始以为LESS书写不规范或者是哪里问题，各种修改，各种蛋疼，就取消嵌套规则，结果还是不行，后台请教了文浩大哥，他第二天早上去看了看打包工具的源码，才发现是我的import问题，删掉结果就成功了，那时候，感动的鼻涕鼻屎都快出来了（没那么夸张，有点夸张，就是比较激动吧）。</p>
+<p>成功后，下载打包成功的代码包，准备部署到测试环境了，这下师傅跟我说你用Xshell工具进行部署，问我会不会LINUX的一些命令，我这下又懵逼了，我说不会，我说你演示我看看，我记一下，结果，上面很多文件夹还是有权限的，一开始给我部署时候，进行代码全部覆盖，其实我都看不懂，比较笨呗，最后，暗自下决心开始学习基本命令，因为Mac几个简单命令还是稍微知道，要是这种 .tar.gz 打包好，先rz命令上传文件包，上传然后用 -zxvf   web-fe-XXXX.tar.gz ( Tab键可补全文件名)   解压文件，然后再改改一个配置文件，就好了，第二天，我做了笔记自己尝试了下，觉得还行，像文件的删除，移动，或者是解压命令用几次就熟悉啦。也就能实现自己去部署代码啦。</p>
+<p>######浅谈提测：</p>
+<p>以前写代码，假如有测试人员，貌似都是后台部署然后测试进行测试吧，怎么测试我就不懂啦。现在需要做的就是进行提交测试申请，加入后端写接口的 他们也自己提交自己的测试申请，前端自己开发的提交自己Git分支的测试申请，通过网站，把构建好的源码包上传，还有需要写README文件，大致内容告诉测试人员提测点，需要测试哪些功能，他们好进行测试，还有就是你修改的哪些文件，这样他们测试的时候，直接抓取那个修改的文件过来就好，不至于整个项目进行替换，还有自己也写写备注自己修改了哪些文件，自己好知道。还有重要的一点就是，写提测点文件需要附上后台接口地址这样他们测试人员好对照接口进行测试，还有，因为埋点前端自己加，所以加了哪些也得提测前写到通用的线上文档里面，写完了测试申请说明和文件就提交上去啦，只是第一轮提测，期间测试人员通过禅道进行测试Bug反馈，不过，我拿到我的禅道账号打开一看，再次懵逼了，里面的项目多的我都找不到我的项目属于哪个，最后才知道我需要问问测试人员测试项目的版本号，每进行一个小功能测试都有测试版本号，加入这个版本号测试完了，你去修改Bug 改完了后继续提交第二轮测试，貌似好几轮测试。都不容易啊。<del>~~(&gt;_&lt;)</del>~~</p>
+<h6 id="浅谈Bug："><a href="#浅谈Bug：" class="headerlink" title="浅谈Bug："></a>浅谈Bug：</h6><p>说下遇到的一个之前没遇到过的Bug吧，就是tbody用JS的innerHTML插入，在IE9- 不支持，因为IE的只读模式所以出现未知的报错， [<a href="http://stackoverflow.com/questions/4729644/cant-set-innerhtml-on-tbody-in-ie" target="_blank">问题描述</a>]， 尝试后发现过于复杂并且不使用这个模板渲染方式，所以最后不得不换用li 标签之类的修改。加上模板引擎就不好做处理，所以需要谨慎用table标签吧。</p>
+<p>涉及到的知识点有： 加入我用callRoute调用路由的方式进行页面的参数附带在浏览器上数据重新渲染，那还好，但是，我实现的是JS的重新渲染数据，所以这里就遇到瓶颈，纠结了一晚上最后还是决定改标签了。数据逻辑还是需要考虑全面一点才行。</p>
+<p>今天例会，师傅老大说，看我现在手头项目也差不多好了，就说叫我下周开始学习React  + Webpack ，新项目会用到吧，正好我也想研究点新东西加上项目实践。然后ECUI项目边弄吧。</p>
+<p>决不能让自己闲下来，笨鸟。</p>
+<p>明天团建得早起，2天时间得忙咯，貌似去北京郊外玩玩，顺带爬爬山。好久没去走走了，快枯萎了。晚安。</p>
+<p style="text-align: right;"><strong>Bing  2016.5.20</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="ES6" scheme="https://hyb628.github.io/tags/ES6/"/>
+    
+      <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
+    
+      <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
     
   </entry>
   
