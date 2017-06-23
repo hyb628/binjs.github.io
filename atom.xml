@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hyb628.github.io/"/>
-  <updated>2017-06-02T07:54:49.000Z</updated>
+  <updated>2017-06-23T11:58:59.000Z</updated>
   <id>https://hyb628.github.io/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>supervisor自动监测文件修改</title>
+    <link href="https://hyb628.github.io/2017/06/23/supervisor%E7%9B%91%E6%B5%8B%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/"/>
+    <id>https://hyb628.github.io/2017/06/23/supervisor监测文件修改/</id>
+    <published>2017-06-23T06:26:24.000Z</published>
+    <updated>2017-06-23T11:58:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在node.js中，有时候项目中修改一个配置文件，需要重新<code>npm start</code> , supervisor插件很好的解决了这一难题。</p>
+<h4 id="supervisor安装"><a href="#supervisor安装" class="headerlink" title="supervisor安装"></a>supervisor安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i -g supervisor</div></pre></td></tr></table></figure>
+<h4 id="supervisor参数"><a href="#supervisor参数" class="headerlink" title="supervisor参数"></a>supervisor参数</h4><p>监控的文件夹或文件，默认为’.’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-w | --watch &lt;watchItems&gt;</div></pre></td></tr></table></figure>
+<p>要忽略监控的文件夹或js文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-i | --ignore &lt;ignoreItems&gt;</div></pre></td></tr></table></figure>
+<p>监控文件变化的时间间隔（周期），默认为Node.js内置的时间：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-p | --poll-interval &lt;milliseconds&gt;</div></pre></td></tr></table></figure></p>
+<p>要执行的主应用程序，默认为’node’：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-x | --exec &lt;executable&gt;</div></pre></td></tr></table></figure>
+<p>开启debug模式（用–debug flag来启动node）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">--debug</div></pre></td></tr></table></figure></p>
+<p>安静模式，不显示DEBUG信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-q |--quiet</div></pre></td></tr></table></figure></p>
+<h4 id="package-json中使用"><a href="#package-json中使用" class="headerlink" title="package.json中使用"></a>package.json中使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">    &quot;start&quot;: &quot;supervisor server.js&quot;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在node.js中，有时候项目中修改一个配置文件，需要重新&lt;code&gt;npm start&lt;/code&gt; , supervisor插件很好的解决了这一难题。&lt;/p&gt;
+&lt;h4 id=&quot;supervisor安装&quot;&gt;&lt;a href=&quot;#supervisor安装&quot; class=&quot;he
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="webpack" scheme="https://hyb628.github.io/tags/webpack/"/>
+    
+      <category term="supervisor" scheme="https://hyb628.github.io/tags/supervisor/"/>
+    
+      <category term="plugin" scheme="https://hyb628.github.io/tags/plugin/"/>
+    
+  </entry>
   
   <entry>
     <title>setState不及时更新的问题</title>

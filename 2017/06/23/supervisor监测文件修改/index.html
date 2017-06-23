@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="一喵呜,前端开发,JavaScript,CSS3,HTML5,React，Angular,开发工具，随笔生活" />
+  <meta name="keywords" content="webpack,supervisor,plugin," />
 
 
 
@@ -92,12 +92,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="一喵呜">
-<meta property="og:url" content="https://hyb628.github.io/tags/BFC/index.html">
+<meta name="description" content="在node.js中，有时候项目中修改一个配置文件，需要重新npm start , supervisor插件很好的解决了这一难题。 supervisor安装1npm i -g supervisor supervisor参数监控的文件夹或文件，默认为’.’ 1-w | --watch &amp;lt;watchItems&amp;gt; 要忽略监控的文件夹或js文件： 1-i | --ignore &amp;lt;ignor">
+<meta name="keywords" content="webpack,supervisor,plugin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="supervisor自动监测文件修改">
+<meta property="og:url" content="https://hyb628.github.io/2017/06/23/supervisor监测文件修改/index.html">
 <meta property="og:site_name" content="一喵呜">
+<meta property="og:description" content="在node.js中，有时候项目中修改一个配置文件，需要重新npm start , supervisor插件很好的解决了这一难题。 supervisor安装1npm i -g supervisor supervisor参数监控的文件夹或文件，默认为’.’ 1-w | --watch &amp;lt;watchItems&amp;gt; 要忽略监控的文件夹或js文件： 1-i | --ignore &amp;lt;ignor">
+<meta property="og:updated_time" content="2017-06-23T11:58:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一喵呜">
+<meta name="twitter:title" content="supervisor自动监测文件修改">
+<meta name="twitter:description" content="在node.js中，有时候项目中修改一个配置文件，需要重新npm start , supervisor插件很好的解决了这一难题。 supervisor安装1npm i -g supervisor supervisor参数监控的文件夹或文件，默认为’.’ 1-w | --watch &amp;lt;watchItems&amp;gt; 要忽略监控的文件夹或js文件： 1-i | --ignore &amp;lt;ignor">
 
 
 
@@ -125,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://hyb628.github.io/tags/BFC/"/>
+  <link rel="canonical" href="https://hyb628.github.io/2017/06/23/supervisor监测文件修改/"/>
 
 
 
 
 
-  <title>标签: BFC | 一喵呜</title>
+  <title>supervisor自动监测文件修改 | 一喵呜</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,46 +289,206 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        BFC
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-JavaScript " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://hyb628.github.io/2017/06/23/supervisor监测文件修改/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="一喵呜">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一喵呜">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                supervisor自动监测文件修改
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-23T14:26:24+08:00">
+                2017-06-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-CSS" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>在node.js中，有时候项目中修改一个配置文件，需要重新<code>npm start</code> , supervisor插件很好的解决了这一难题。</p>
+<h4 id="supervisor安装"><a href="#supervisor安装" class="headerlink" title="supervisor安装"></a>supervisor安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i -g supervisor</div></pre></td></tr></table></figure>
+<h4 id="supervisor参数"><a href="#supervisor参数" class="headerlink" title="supervisor参数"></a>supervisor参数</h4><p>监控的文件夹或文件，默认为’.’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-w | --watch &lt;watchItems&gt;</div></pre></td></tr></table></figure>
+<p>要忽略监控的文件夹或js文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-i | --ignore &lt;ignoreItems&gt;</div></pre></td></tr></table></figure>
+<p>监控文件变化的时间间隔（周期），默认为Node.js内置的时间：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-p | --poll-interval &lt;milliseconds&gt;</div></pre></td></tr></table></figure></p>
+<p>要执行的主应用程序，默认为’node’：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-x | --exec &lt;executable&gt;</div></pre></td></tr></table></figure>
+<p>开启debug模式（用–debug flag来启动node）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">--debug</div></pre></td></tr></table></figure></p>
+<p>安静模式，不显示DEBUG信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-q |--quiet</div></pre></td></tr></table></figure></p>
+<h4 id="package-json中使用"><a href="#package-json中使用" class="headerlink" title="package.json中使用"></a>package.json中使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">    &quot;start&quot;: &quot;supervisor server.js&quot;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
 
-      <h2 class="post-title">
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/06/06/BFC的理解与应用/" itemprop="url">
-              
-                <span itemprop="name">BFC的理解与应用</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-06T14:26:24+08:00"
-              content="2016-06-06" >
-          06-06
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      一喵呜
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://hyb628.github.io/2017/06/23/supervisor监测文件修改/" title="supervisor自动监测文件修改">https://hyb628.github.io/2017/06/23/supervisor监测文件修改/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+            <a href="/tags/supervisor/" rel="tag"># supervisor</a>
+          
+            <a href="/tags/plugin/" rel="tag"># plugin</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/01/为啥说setState是异步的/" rel="prev" title="setState不及时更新的问题">
+                setState不及时更新的问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -331,6 +496,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -350,8 +519,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -449,6 +627,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#supervisor安装"><span class="nav-number">1.</span> <span class="nav-text">supervisor安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#supervisor参数"><span class="nav-number">2.</span> <span class="nav-text">supervisor参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#package-json中使用"><span class="nav-number">3.</span> <span class="nav-text">package.json中使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -553,6 +747,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
