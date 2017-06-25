@@ -156,52 +156,6 @@
   </entry>
   
   <entry>
-    <title>求负数的二进制</title>
-    <link href="https://hyb628.github.io/2016/09/03/%E8%B4%9F%E6%95%B0%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
-    <id>https://hyb628.github.io/2016/09/03/负数的二进制/</id>
-    <published>2016-09-03T06:26:24.000Z</published>
-    <updated>2017-06-02T17:03:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>[转]</p>
-<p>负数用二进制表达。比如，假设有一 int 类型的数，值为5，那么，我们知道它在计算机中表示为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">00000000 00000000 00000000 00000101</div></pre></td></tr></table></figure></p>
-<p>5转换成二制是101，不过int类型的数占用4字节（32位），所以前面填了一堆0。<br>现在想知道，-5在计算机中如何表示？</p>
-<blockquote>
-<p>在计算机中，负数以其正值的补码形式表达。</p>
-</blockquote>
-<p>什么叫补码呢？这得从原码，反码说起。</p>
-<blockquote>
-<p>原码：一个整数，按照绝对值大小转换成的二进制数，称为原码。</p>
-</blockquote>
-<p>比如 <code>00000000 00000000 00000000 00000101</code> 是 5的 原码。<br>反码：将二进制数按位取反，所得的新二进制数称为原二进制数的反码。<br>取反操作指：原为1，得0；原为0，得1。（1变0; 0变1）<br>比如：将<code>00000000 00000000 00000000 00000101</code>每一位取反，得<code>11111111 11111111 11111111 11111010</code>。</p>
-<p>称：<code>11111111 11111111 11111111 11111010</code> 是 <code>00000000 00000000 00000000 00000101</code> 的反码。</p>
-<p>反码是相互的，所以也可称：</p>
-<p><code>11111111 11111111 11111111 11111010</code> 和 <code>00000000 00000000 00000000 00000101</code> 互为反码。
-　</p>
-<blockquote>
-<p>补码：反码加1称为补码。</p>
-</blockquote>
-<p>也就是说，要得到一个数的补码，先得到反码，然后将反码加上1，所得数称为补码。<br>比如：<code>00000000 00000000 00000000 00000101</code> 的反码是：<code>11111111 11111111 11111111 11111010</code>。<br>那么，补码为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11111111 11111111 11111111 11111010 + 1 = 11111111 11111111 11111111 11111011</div></pre></td></tr></table></figure>
-<p>所以，-5 在计算机中表达为：<code>11111111 11111111 11111111 11111011</code>。转换为十六进制：<code>0xFFFFFFFB</code>。<br>再举一例，我们来看整数-1在计算机中如何表示。<br>假设这也是一个int类型，那么：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1、先取1的原码： 00000000 00000000 00000000 00000001</div><div class="line">2、得反码：     11111111 11111111 11111111 11111110</div><div class="line">3、得补码：     11111111 11111111 11111111 11111111</div></pre></td></tr></table></figure>
-<p>可见，－1在计算机里用二进制表达就是全1。16进制为：0xFFFFFF</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;[转]&lt;/p&gt;
-&lt;p&gt;负数用二进制表达。比如，假设有一 int 类型的数，值为5，那么，我们知道它在计算机中表示为：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div cla
-    
-    </summary>
-    
-      <category term="计算机基础" scheme="https://hyb628.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="二进制" scheme="https://hyb628.github.io/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
-    
-  </entry>
-  
-  <entry>
     <title>阶段性技术啰嗦（二）</title>
     <link href="https://hyb628.github.io/2016/09/03/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%8A%80%E6%9C%AF%E5%95%B0%E5%97%A62/"/>
     <id>https://hyb628.github.io/2016/09/03/阶段性技术啰嗦2/</id>
@@ -251,6 +205,52 @@
       <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
     
       <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>求负数的二进制</title>
+    <link href="https://hyb628.github.io/2016/09/03/%E8%B4%9F%E6%95%B0%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
+    <id>https://hyb628.github.io/2016/09/03/负数的二进制/</id>
+    <published>2016-09-03T06:26:24.000Z</published>
+    <updated>2017-06-02T17:03:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[转]</p>
+<p>负数用二进制表达。比如，假设有一 int 类型的数，值为5，那么，我们知道它在计算机中表示为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">00000000 00000000 00000000 00000101</div></pre></td></tr></table></figure></p>
+<p>5转换成二制是101，不过int类型的数占用4字节（32位），所以前面填了一堆0。<br>现在想知道，-5在计算机中如何表示？</p>
+<blockquote>
+<p>在计算机中，负数以其正值的补码形式表达。</p>
+</blockquote>
+<p>什么叫补码呢？这得从原码，反码说起。</p>
+<blockquote>
+<p>原码：一个整数，按照绝对值大小转换成的二进制数，称为原码。</p>
+</blockquote>
+<p>比如 <code>00000000 00000000 00000000 00000101</code> 是 5的 原码。<br>反码：将二进制数按位取反，所得的新二进制数称为原二进制数的反码。<br>取反操作指：原为1，得0；原为0，得1。（1变0; 0变1）<br>比如：将<code>00000000 00000000 00000000 00000101</code>每一位取反，得<code>11111111 11111111 11111111 11111010</code>。</p>
+<p>称：<code>11111111 11111111 11111111 11111010</code> 是 <code>00000000 00000000 00000000 00000101</code> 的反码。</p>
+<p>反码是相互的，所以也可称：</p>
+<p><code>11111111 11111111 11111111 11111010</code> 和 <code>00000000 00000000 00000000 00000101</code> 互为反码。
+　</p>
+<blockquote>
+<p>补码：反码加1称为补码。</p>
+</blockquote>
+<p>也就是说，要得到一个数的补码，先得到反码，然后将反码加上1，所得数称为补码。<br>比如：<code>00000000 00000000 00000000 00000101</code> 的反码是：<code>11111111 11111111 11111111 11111010</code>。<br>那么，补码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11111111 11111111 11111111 11111010 + 1 = 11111111 11111111 11111111 11111011</div></pre></td></tr></table></figure>
+<p>所以，-5 在计算机中表达为：<code>11111111 11111111 11111111 11111011</code>。转换为十六进制：<code>0xFFFFFFFB</code>。<br>再举一例，我们来看整数-1在计算机中如何表示。<br>假设这也是一个int类型，那么：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1、先取1的原码： 00000000 00000000 00000000 00000001</div><div class="line">2、得反码：     11111111 11111111 11111111 11111110</div><div class="line">3、得补码：     11111111 11111111 11111111 11111111</div></pre></td></tr></table></figure>
+<p>可见，－1在计算机里用二进制表达就是全1。16进制为：0xFFFFFF</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;[转]&lt;/p&gt;
+&lt;p&gt;负数用二进制表达。比如，假设有一 int 类型的数，值为5，那么，我们知道它在计算机中表示为：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div cla
+    
+    </summary>
+    
+      <category term="计算机基础" scheme="https://hyb628.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="二进制" scheme="https://hyb628.github.io/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
     
   </entry>
   
