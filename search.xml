@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[面试题：setTimeout 0 与 Promise的执行时机]]></title>
+      <url>%2F2017%2F06%2F28%2FsetTimeout%200%20%E4%B8%8E%20Promise%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA%2F</url>
+      <content type="text"><![CDATA[题目是这样的：function a() {}a();a();多次调用的时候 只让它执行一次。 lodash.one 的实现 另一种实现1234567891011121314151617181920function once(fn, context) &#123; var result; return function() &#123; if(fn) &#123; result = fn.apply(context || this, arguments); fn = null; &#125; return result; &#125;;&#125; // Usagevar canOnlyFireOnce = once(function() &#123; console.log(&apos;Fired!&apos;);&#125;); canOnlyFireOnce(); // &quot;Fired!&quot;canOnlyFireOnce(); // nothing 或者是123456789101112131415function test () &#123;console.log(&apos;test&apos;)&#125;var once = function (fn) &#123; var isFirst = true; return function () &#123; if (isFirst) &#123; isFirst = !isFirst; fn(); &#125; &#125;;&#125;;var b = once(test);b(); // &apos;test&apos;b(); // nothing 其实实现的原理还是通过闭包的形式 通过一个flag标志来记录是否被调用过， 有的话就标记为true 然后再置为false这样的。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[面试题：传入任意1-7的数组转为对应星期问题]]></title>
       <url>%2F2017%2F06%2F28%2F%E4%BC%A0%E5%85%A5%E4%BB%BB%E6%84%8F1-7%E7%9A%84%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E5%AF%B9%E5%BA%94%E6%98%9F%E6%9C%9F%E9%97%AE%E9%A2%98%2F</url>
       <content type="text"><![CDATA[已知一个1-7的数组 输出对应的星期如:输入 [1, 2, 3, 5, 6] —-&gt; 输出 星期1-星期3 星期5 星期6输入 [1, 2, 5, 6] —-&gt; 输出 星期1-星期2 星期5 星期5输入 [1, 2, 4, 5, 6, 7] —-&gt; 输出 星期1-星期2 星期5-星期6 星期7]]></content>
