@@ -261,6 +261,125 @@
   </entry>
   
   <entry>
+    <title>百度贴吧前端面试</title>
+    <link href="https://hyb628.github.io/2017/07/11/%E7%99%BE%E5%BA%A6%E8%B4%B4%E5%90%A7%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    <id>https://hyb628.github.io/2017/07/11/百度贴吧前端面试/</id>
+    <published>2017-07-11T13:55:08.000Z</published>
+    <updated>2017-07-16T03:11:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>下午到了上地，去了一个大厦，约了面试官下来，就开始面试了。主要整理下面试的一些题目吧。</p>
+</blockquote>
+<h4 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h4><p>【一 二面都会全程记录你的面试情况 做记录】</p>
+<ol>
+<li>css面试:</li>
+</ol>
+<ul>
+<li>H5的新特性  新标签</li>
+<li>水平垂直居中的几种方法 以及 vertical-align的情况</li>
+<li>布局（比如左边固定 右边自适应） </li>
+<li>rem的计算方法</li>
+<li>H5的meta 设定</li>
+<li>CSS3的选择器权重计算</li>
+<li>H5 和 web端的性能优化有哪些</li>
+<li>移动端兼容性问题</li>
+<li>说说浏览器中的盒模型</li>
+<li>有没有看过天猫（淘宝）网页的实现流程？</li>
+<li>BFC ，清浮动实现</li>
+<li>display 有哪些属性</li>
+<li>也可以在一个display:none的元素上进行操作，最终把它显示出来。因为display:none上的DOM操作不会引发回流和重绘。 </li>
+<li>面试官问none标签 刷新 还会 重绘回流吗？</li>
+</ul>
+<ol>
+<li>JS面试</li>
+</ol>
+<ul>
+<li>手写封装一个AJAX兼容IE8 可以直接在浏览器运行的 callback</li>
+<li>模块化的发展 原理吧</li>
+<li>react的生命周期执行顺序，还有组件挂载的清除方式</li>
+<li>说说react中的connect吧</li>
+<li>说说观察者模式</li>
+<li>浏览器中的事件几种情况 以及事件委托, a标签点击事件 不让它跳转，以及阻止冒泡</li>
+<li>闭包</li>
+<li>作用域</li>
+<li>说说<strong>proto</strong>  以及 原型链</li>
+<li>ES6的一些知识点 用到哪些</li>
+<li>有没有看过JQ源码？（没有）， 有没有看到sass源码？ （没有）【说sass的源码很短 没看过啊， ？ 没！！】，sass是怎么处理的？ </li>
+<li>componentDidMount 和 componentWillMount  哪个先执行？ 在render 之前还是之后</li>
+<li>React的性能优化</li>
+<li>写过webpack插件吗？或者插件是怎么实现的？</li>
+<li>跨域</li>
+<li>createElement有几个参数， react 怎么创建dom元素 【我觉得应该是问我这个React.renderComponent(<app>, document.body)】</app></li>
+<li>setState 的回调干嘛用的， ref的回调</li>
+<li>说说 ‘use strict’</li>
+<li>说说构造函数的new</li>
+<li>为什么要做CDN 或者 不同域名放资源文件 { 浏览器的请求并发限制 }</li>
+<li>问了面试官 贴吧团队是nodejs  还是fis ，react ，以及H5 和 混合开发。</li>
+</ul>
+<h4 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h4><ol>
+<li>画个HTTP请求的过程吧 越详细越好</li>
+<li>性能优化方面 写出几点列出来 还是步步深入的问吧。</li>
+<li>浏览器渲染过程,？  如果一个css文件 遇到JS文件 底下又一个css文件，这块浏览器的处理 是怎样的？ 还是原理问题</li>
+<li>webpack 做发布 时候，怎么做一个资源文件 到CDN  里面的配置吧 【懵逼了】</li>
+<li>…. (想不起来了)…</li>
+</ol>
+<p>总体来说 面试的感觉挺有意思的，可惜到二面就没戏了。 不过还是学到了很多东西。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;下午到了上地，去了一个大厦，约了面试官下来，就开始面试了。主要整理下面试的一些题目吧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;一面&quot;&gt;&lt;a href=&quot;#一面&quot; class=&quot;headerlink&quot; title=&quot;一面&quot;&gt;&lt;/a&gt;一面
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="面试题" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="https://hyb628.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题：让javascript函数仅执行一次</title>
+    <link href="https://hyb628.github.io/2017/06/28/%E8%AE%A9javascript%E5%87%BD%E6%95%B0%E4%BB%85%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1/"/>
+    <id>https://hyb628.github.io/2017/06/28/让javascript函数仅执行一次/</id>
+    <published>2017-06-28T01:55:08.000Z</published>
+    <updated>2017-07-06T03:34:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>题目是这样的：<br>function a() {}<br>a();<br>a();<br>多次调用的时候 只让它执行一次。</p>
+</blockquote>
+<h6 id="lodash-one-的实现"><a href="#lodash-one-的实现" class="headerlink" title="lodash.one 的实现"></a>lodash.one 的实现</h6><script async src="//jsfiddle.net/hyb628/h41tx68s/embed/js/"></script>
+
+<h5 id="另一种实现"><a href="#另一种实现" class="headerlink" title="另一种实现"></a>另一种实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function once(fn, context) &#123; </div><div class="line">    var result;</div><div class="line"> </div><div class="line">    return function() &#123; </div><div class="line">        if(fn) &#123;</div><div class="line">            result = fn.apply(context || this, arguments);</div><div class="line">            fn = null;</div><div class="line">        &#125;</div><div class="line"> </div><div class="line">        return result;</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">// Usage</div><div class="line">var canOnlyFireOnce = once(function() &#123;</div><div class="line">    console.log(&apos;Fired!&apos;);</div><div class="line">&#125;);</div><div class="line"> </div><div class="line">canOnlyFireOnce(); // &quot;Fired!&quot;</div><div class="line">canOnlyFireOnce(); // nothing</div></pre></td></tr></table></figure>
+<h5 id="或者是"><a href="#或者是" class="headerlink" title="或者是"></a>或者是</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function test () &#123;console.log(&apos;test&apos;)&#125;</div><div class="line"></div><div class="line">var once = function (fn) &#123;</div><div class="line">  var isFirst = true;</div><div class="line">  return function () &#123;</div><div class="line">    if (isFirst) &#123;</div><div class="line">      isFirst = !isFirst;</div><div class="line">      fn();</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var b = once(test);</div><div class="line">b(); // &apos;test&apos;</div><div class="line">b(); // nothing</div></pre></td></tr></table></figure>
+<p>其实实现的原理还是通过闭包的形式 通过一个flag标志来记录是否被调用过， 有的话就标记为true 然后再置为false这样的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;题目是这样的：&lt;br&gt;function a() {}&lt;br&gt;a();&lt;br&gt;a();&lt;br&gt;多次调用的时候 只让它执行一次。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&quot;lodash-one-的实现&quot;&gt;&lt;a href=&quot;#lodash-on
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="面试题" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="https://hyb628.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>面试题：传入任意1-7的数组转为对应星期问题</title>
     <link href="https://hyb628.github.io/2017/06/28/%E4%BC%A0%E5%85%A5%E4%BB%BB%E6%84%8F1-7%E7%9A%84%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E5%AF%B9%E5%BA%94%E6%98%9F%E6%9C%9F%E9%97%AE%E9%A2%98/"/>
     <id>https://hyb628.github.io/2017/06/28/传入任意1-7的数组转为对应星期问题/</id>
@@ -307,41 +426,6 @@
 &lt;p&gt;还没整理。。 等等&lt;/p&gt;
 &lt;/blockquote&gt;
 
-    
-    </summary>
-    
-      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="面试题" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试题" scheme="https://hyb628.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试题：让javascript函数仅执行一次</title>
-    <link href="https://hyb628.github.io/2017/06/28/%E8%AE%A9javascript%E5%87%BD%E6%95%B0%E4%BB%85%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1/"/>
-    <id>https://hyb628.github.io/2017/06/28/让javascript函数仅执行一次/</id>
-    <published>2017-06-28T01:55:08.000Z</published>
-    <updated>2017-07-06T03:34:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>题目是这样的：<br>function a() {}<br>a();<br>a();<br>多次调用的时候 只让它执行一次。</p>
-</blockquote>
-<h6 id="lodash-one-的实现"><a href="#lodash-one-的实现" class="headerlink" title="lodash.one 的实现"></a>lodash.one 的实现</h6><script async src="//jsfiddle.net/hyb628/h41tx68s/embed/js/"></script>
-
-<h5 id="另一种实现"><a href="#另一种实现" class="headerlink" title="另一种实现"></a>另一种实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function once(fn, context) &#123; </div><div class="line">    var result;</div><div class="line"> </div><div class="line">    return function() &#123; </div><div class="line">        if(fn) &#123;</div><div class="line">            result = fn.apply(context || this, arguments);</div><div class="line">            fn = null;</div><div class="line">        &#125;</div><div class="line"> </div><div class="line">        return result;</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">// Usage</div><div class="line">var canOnlyFireOnce = once(function() &#123;</div><div class="line">    console.log(&apos;Fired!&apos;);</div><div class="line">&#125;);</div><div class="line"> </div><div class="line">canOnlyFireOnce(); // &quot;Fired!&quot;</div><div class="line">canOnlyFireOnce(); // nothing</div></pre></td></tr></table></figure>
-<h5 id="或者是"><a href="#或者是" class="headerlink" title="或者是"></a>或者是</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function test () &#123;console.log(&apos;test&apos;)&#125;</div><div class="line"></div><div class="line">var once = function (fn) &#123;</div><div class="line">  var isFirst = true;</div><div class="line">  return function () &#123;</div><div class="line">    if (isFirst) &#123;</div><div class="line">      isFirst = !isFirst;</div><div class="line">      fn();</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var b = once(test);</div><div class="line">b(); // &apos;test&apos;</div><div class="line">b(); // nothing</div></pre></td></tr></table></figure>
-<p>其实实现的原理还是通过闭包的形式 通过一个flag标志来记录是否被调用过， 有的话就标记为true 然后再置为false这样的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;题目是这样的：&lt;br&gt;function a() {}&lt;br&gt;a();&lt;br&gt;a();&lt;br&gt;多次调用的时候 只让它执行一次。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&quot;lodash-one-的实现&quot;&gt;&lt;a href=&quot;#lodash-on
     
     </summary>
     
@@ -1082,61 +1166,6 @@
       <category term="Hack" scheme="https://hyb628.github.io/tags/Hack/"/>
     
       <category term="userAgent" scheme="https://hyb628.github.io/tags/userAgent/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阶段性技术啰嗦（一）</title>
-    <link href="https://hyb628.github.io/2016/05/20/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%8A%80%E6%9C%AF%E5%95%B0%E5%97%A61/"/>
-    <id>https://hyb628.github.io/2016/05/20/阶段性技术啰嗦1/</id>
-    <published>2016-05-20T06:26:24.000Z</published>
-    <updated>2017-04-29T08:31:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=17579515&auto=1&height=66"></iframe>
-
-<p>听听有情怀的歌，陶冶情操！大学很爱的一首歌。</p>
-<p>又到周五了，趁现在下班时间，抽空写写最近在公司遇到的坑以及学到的东西吧，最近一直很少做自己的技术总结，老是写生活随笔啥的似乎也不符合我这个愤青的年龄 。看到我都觉得我活在小康社会似的，我都快不相信自己了。</p>
-<p>最近一直在做支付项目，公司用到了百度ECUI的一个MVC框架，配合<code>ETpl模板引擎</code>，后台是Java语言，开始做<a href="http://2014.jsconf.cn/slides/herman-taobaoweb/#/1" target="_blank" rel="external">前后端分离</a></p>
-<p>毕竟第一次做，难免有些紧张。(~.~)，讲讲几个遇到的问题以及解决办法吧，俗话说，找到合适的途径 合适的方法才是做重要的。因为在公司没写完就回来了，所以深夜还是继续写，当日事当日毕。</p>
-<h5 id="ETpl"><a href="#ETpl" class="headerlink" title="ETpl"></a>ETpl</h5><p>说说ETpl吧，一个百度模板引擎，虽然用到人不是很多，但是大致还是一样的吧 通用模板都是大致类似，一开始遇到的问题还是挺多的，因为模板在项目或者是组件都是很多封装或者是写好的，需要什么就哪来用，不过，多多少少还是会有问题的，比如兼容性或者是可能这个组件不适用今后的产品升级，那就需要更新这个组件，但是你会发现，组件是很多地方在通用，所以你很多东西你不能乱动的，就怕会牵一发而动全身。</p>
-<p>但是这不是我要考虑的事情，我要做的就是把功能做好，或者做出来吧 现阶段。先熟悉熟悉框架或者是别人的代码，一开始没啥经验，也没比较全面的文档，或者是教程，很多都是需要你去看别人的代码或者是代码去运行了你才能懂这个功能到底是干嘛用的。刚开始前几天确实没头绪，蒙了，有点想放弃，但是想想别人大都是这么过来的，自己就是吃翔也得坚持下来对吧?</p>
-<h5 id="ECUI"><a href="#ECUI" class="headerlink" title="ECUI"></a>ECUI</h5><p>ECUI实现MVC的一些业务实现控件化，就是希望做到每个功能能够组件化吧。不过写组件的我都觉得很佩服，是我需要学习的前辈们。</p>
-<p>入职第一天，我的导师—— 我的师傅，挺不错的，我见过的很勤奋的一个女前端，得叫全栈，因为他们都是Java转的前端，来抢前端的饭碗的女中豪杰，还有超哥和浩哥都是这里的一员。吃饭都是各成一派，我要是想吃面食就跟浩哥走，想吃盖饭啥的就跟超哥走。就是这么随波逐流，没办法。</p>
-<p>一开始，需要知道的东西比较多，所以比较乱，毕竟从外包公司出来的，所以很多东西还是比较不规范需要去加强学习的。先来说说Git吧，耳熟能详的东西。</p>
-<p>按照以往的做法，以往我们都是直接在Master提交代码，或者是SVN，那时候还不是命令那么高端，都是客户端可视化，所以直接更新或者是检出提交，所以总出现各种问题，在外包的时候，你需要跟着客户的节奏走，赶时间赶项目，时间一紧张就会频繁遇到问题。小项目还好，但是遇到大项目估计就不行了这种办法。</p>
-<p>来了公司之后，开始熟悉下运作流程，提交代码都是各种需要权限，我自己建一个分支，然后开始开发了，每次提交代码都需要别人的代码审核或者叫review，没问题给你通过代码审核，你可能push成功上去，不行就给你打回去，你就需要重新git reset 到成功的那个版本（changeId） ，假如通过了，那还不一定就完事了，代码是使用<em>Jenkin</em>s配置自动化构建，自动代码检查和压缩打包之类的，你得看是不是有报错，所以没问题才能继续通过SSH上传到开发环境。一开始我又蒙了，什么鬼啊这是？一直出问题，代码报错，因为你JS不书写规范或者是CSS 不书写规范都会构建不成功（比如function后面需要空格或者是改空格就空格，分号啥的都要按照书写规范，一开始有个功能用到Tab切换，我用到的时候闭包去写切换，然后又是报错，我实在没辙了），最后师傅叫我安装本地的JSSLint 和 CSSLint ，OK 安装就安装呗，没想到，又是遇到问题来了。我之前Sublime安装了各种插件，所以一直安装不成功，因为公司用的CSSLint 和 JSLint 的校验包都是有了，我需要用Node安装着两个，然后替换这两个文件夹，后台我把我心爱的插件都删了，重新安装了CSSLint 和 JSLint 就可以了，真是纠结死我了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.安装nodejs最新版本，通过nodejs指令 cmd下执行npm install -g xxx分别安装jslint与csslint</div><div class="line">npm install -g jslint</div><div class="line">npm install -g csslint</div><div class="line">2.安装Sublime Text 3(推荐，也可以安装别的工具)，安装Package Control</div><div class="line">3.通过Package Control安装SublimeLinter/SublimeLinter-contrib-jslint/SublimeLinter-csslint</div><div class="line">  ctrl + shift + p---&amp;gt;install package</div><div class="line">4.执行jslint找到jslint的安装目录的父目录，使用我提供的jslint/csslint包覆盖掉原来的jslint与csslint</div></pre></td></tr></table></figure>
-<p>安装完这两个东西，把所有的文件报错都修改了 ，再Git命令push,review进行审核，哦哦，原来如此，不过真是折腾死宝宝 了(づ｡◕‿‿◕｡)づ  我不能放弃吃药才行！</p>
-<h5 id="Fiddler代理"><a href="#Fiddler代理" class="headerlink" title="Fiddler代理"></a>Fiddler代理</h5><p>也是知道原来用这个来做前后端分离，假如后台是Java或者是项目是基于后台的Java 我就想到头疼的需要各种配置后台环境，用Fiddler 写正则判断，实现本地走代理，不过需要配置本地的HOST文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">regex:https://hyb628.github.io/(.*).(html|js|css|less|js_|jpg|png)(\?[a-zA-Z0-9]+=[0-9A-Za-z]*)?$</div></pre></td></tr></table></figure>
-<p>这样我就把需要的资源就不走外网直接走本地，不过https链接本地打开的话每次都提示证书问题确实比价烦，需要把s去掉就好，第一次资源加载进来在打开代理加载规则，加上用用框架的，视图层 和 数据逻辑都分开配合使用，加上ECUI的路由addRoute 控制实现类似单页面的不刷新页面跳转差不多这个意思。也可以用callRoute调用路由，哦哦，原来这样啊。</p>
-<p>前端交互之前一直没在做这块，所以，后端专心写他们的接口就好了，前端也不用去管他们用什么环境，前端该怎么开发就怎么开发，完全独立出来。各自负责自己的业务吧。</p>
-<p>后台写好接口需要前后端联调，好吧，我确实没做过这块，所以，又得跟后台大哥去做配合联调，一开始可能他们写的接口有问题那就慢慢对接，我照样开发，我需要什么参数叫后台给我提供好，或者看需求文档，不过，需求文档这东西，要是产品经理写的没那么详细，那估计你又得去撩妹，找找她们说说哪里不行怎么做好了。也很费神。</p>
-<p>需求文档包含埋点的增加，就是类似数据监控吧。我开发完才去加这些 不过还算简单，期间，PPT和PSD 都给到你了，不过PSD比较不好找，估计时间比较赶吧设计师，有点糙，不过也没事，反正我是切图仔，专业抠图20年（顺带抠脚）。</p>
-<p>开发完一个功能，因为涉及到跟JSP的页面跳转，因为毕竟可能有些老代码的话那就不可能一下子都改革过来都是慢慢更新迭代，就涉及到比如页面的跳转，也是需要用路由的方式，发个请求跟JSP那个大哥协商好发什么东西给他我页面才能跳转到正确页面，也蛮有意思的。</p>
-<h5 id="SSH-（Xshell）代码部署"><a href="#SSH-（Xshell）代码部署" class="headerlink" title="SSH （Xshell）代码部署"></a>SSH （Xshell）代码部署</h5><p>我通过Jenkins 构建成功的话，需要进行打包，因为一开始构建我遇到一直打包不成功的问题，后来各种找问题，才发现我的LESS文件里面import了其他功能的LESS ，导致那个文件编译了，我的LESS就被output 丢弃了。所以搞得我都直播吃翔了。一开始以为LESS书写不规范或者是哪里问题，各种修改，各种蛋疼，就取消嵌套规则，结果还是不行，后台请教了文浩大哥，他第二天早上去看了看打包工具的源码，才发现是我的import问题，删掉结果就成功了，那时候，感动的鼻涕鼻屎都快出来了（没那么夸张，有点夸张，就是比较激动吧）。</p>
-<p>成功后，下载打包成功的代码包，准备部署到测试环境了，这下师傅跟我说你用Xshell工具进行部署，问我会不会LINUX的一些命令，我这下又懵逼了，我说不会，我说你演示我看看，我记一下，结果，上面很多文件夹还是有权限的，一开始给我部署时候，进行代码全部覆盖，其实我都看不懂，比较笨呗，最后，暗自下决心开始学习基本命令，因为Mac几个简单命令还是稍微知道，要是这种 .tar.gz 打包好，先rz命令上传文件包，上传然后用 -zxvf   web-fe-XXXX.tar.gz ( Tab键可补全文件名)   解压文件，然后再改改一个配置文件，就好了，第二天，我做了笔记自己尝试了下，觉得还行，像文件的删除，移动，或者是解压命令用几次就熟悉啦。也就能实现自己去部署代码啦。</p>
-<h5 id="CO提测"><a href="#CO提测" class="headerlink" title="CO提测"></a>CO提测</h5><p>以前写代码，假如有测试人员，貌似都是后台部署然后测试进行测试吧，怎么测试我就不懂啦。现在需要做的就是进行提交测试申请，加入后端写接口的 他们也自己提交自己的测试申请，前端自己开发的提交自己Git分支的测试申请，通过网站，把构建好的源码包上传，还有需要写README文件，大致内容告诉测试人员提测点，需要测试哪些功能，他们好进行测试，还有就是你修改的哪些文件，这样他们测试的时候，直接抓取那个修改的文件过来就好，不至于整个项目进行替换，还有自己也写写备注自己修改了哪些文件，自己好知道。还有重要的一点就是，写提测点文件需要附上后台接口地址这样他们测试人员好对照接口进行测试，还有，因为埋点前端自己加，所以加了哪些也得提测前写到通用的线上文档里面，写完了测试申请说明和文件就提交上去啦，只是第一轮提测，期间测试人员通过禅道进行测试Bug反馈，不过，我拿到我的禅道账号打开一看，再次懵逼了，里面的项目多的我都找不到我的项目属于哪个，最后才知道我需要问问测试人员测试项目的版本号，每进行一个小功能测试都有测试版本号，加入这个版本号测试完了，你去修改Bug 改完了后继续提交第二轮测试，貌似好几轮测试。都不容易啊。<del>~~(&gt;_&lt;)</del>~~</p>
-<h5 id="浅谈Bug"><a href="#浅谈Bug" class="headerlink" title="浅谈Bug"></a>浅谈Bug</h5><p>说下遇到的一个之前没遇到过的Bug吧，就是tbody用JS的innerHTML插入，在IE9- 不支持，因为IE的只读模式所以出现未知的报错， <a href="http://stackoverflow.com/questions/4729644/cant-set-innerhtml-on-tbody-in-ie" target="_blank" rel="external">问题描述</a>， 尝试后发现过于复杂并且不使用这个模板渲染方式，所以最后不得不换用li 标签之类的修改。加上模板引擎就不好做处理，所以需要谨慎用table标签吧。</p>
-<p>涉及到的知识点有： 加入我用callRoute调用路由的方式进行页面的参数附带在浏览器上数据重新渲染，那还好，但是，我实现的是JS的重新渲染数据，所以这里就遇到瓶颈，纠结了一晚上最后还是决定改标签了。数据逻辑还是需要考虑全面一点才行。</p>
-<p>今天例会，师傅老大说，看我现在手头项目也差不多好了，就说叫我下周开始学习<code>React</code>  + <code>Webpack</code> ，新项目会用到吧，正好我也想研究点新东西加上项目实践。然后ECUI项目边弄吧。</p>
-<p>明天团建得早起，2天时间得忙咯，貌似去北京郊外玩玩，顺带爬爬山。好久没去走走了，快枯萎了。晚安。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
-    
-    </summary>
-    
-      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="ES6" scheme="https://hyb628.github.io/tags/ES6/"/>
-    
-      <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
-    
-      <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
     
   </entry>
   

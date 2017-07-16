@@ -10,6 +10,20 @@
 
     
     <entry>
+      <title><![CDATA[百度贴吧前端面试]]></title>
+      <url>%2F2017%2F07%2F11%2F%E7%99%BE%E5%BA%A6%E8%B4%B4%E5%90%A7%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%2F</url>
+      <content type="text"><![CDATA[下午到了上地，去了一个大厦，约了面试官下来，就开始面试了。主要整理下面试的一些题目吧。 一面【一 二面都会全程记录你的面试情况 做记录】 css面试: H5的新特性 新标签 水平垂直居中的几种方法 以及 vertical-align的情况 布局（比如左边固定 右边自适应） rem的计算方法 H5的meta 设定 CSS3的选择器权重计算 H5 和 web端的性能优化有哪些 移动端兼容性问题 说说浏览器中的盒模型 有没有看过天猫（淘宝）网页的实现流程？ BFC ，清浮动实现 display 有哪些属性 也可以在一个display:none的元素上进行操作，最终把它显示出来。因为display:none上的DOM操作不会引发回流和重绘。 面试官问none标签 刷新 还会 重绘回流吗？ JS面试 手写封装一个AJAX兼容IE8 可以直接在浏览器运行的 callback 模块化的发展 原理吧 react的生命周期执行顺序，还有组件挂载的清除方式 说说react中的connect吧 说说观察者模式 浏览器中的事件几种情况 以及事件委托, a标签点击事件 不让它跳转，以及阻止冒泡 闭包 作用域 说说proto 以及 原型链 ES6的一些知识点 用到哪些 有没有看过JQ源码？（没有）， 有没有看到sass源码？ （没有）【说sass的源码很短 没看过啊， ？ 没！！】，sass是怎么处理的？ componentDidMount 和 componentWillMount 哪个先执行？ 在render 之前还是之后 React的性能优化 写过webpack插件吗？或者插件是怎么实现的？ 跨域 createElement有几个参数， react 怎么创建dom元素 【我觉得应该是问我这个React.renderComponent(, document.body)】 setState 的回调干嘛用的， ref的回调 说说 ‘use strict’ 说说构造函数的new 为什么要做CDN 或者 不同域名放资源文件 { 浏览器的请求并发限制 } 问了面试官 贴吧团队是nodejs 还是fis ，react ，以及H5 和 混合开发。 二面 画个HTTP请求的过程吧 越详细越好 性能优化方面 写出几点列出来 还是步步深入的问吧。 浏览器渲染过程,？ 如果一个css文件 遇到JS文件 底下又一个css文件，这块浏览器的处理 是怎样的？ 还是原理问题 webpack 做发布 时候，怎么做一个资源文件 到CDN 里面的配置吧 【懵逼了】 …. (想不起来了)… 总体来说 面试的感觉挺有意思的，可惜到二面就没戏了。 不过还是学到了很多东西。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[面试题：让javascript函数仅执行一次]]></title>
+      <url>%2F2017%2F06%2F28%2F%E8%AE%A9javascript%E5%87%BD%E6%95%B0%E4%BB%85%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%2F</url>
+      <content type="text"><![CDATA[题目是这样的：function a() {}a();a();多次调用的时候 只让它执行一次。 lodash.one 的实现 另一种实现1234567891011121314151617181920function once(fn, context) &#123; var result; return function() &#123; if(fn) &#123; result = fn.apply(context || this, arguments); fn = null; &#125; return result; &#125;;&#125; // Usagevar canOnlyFireOnce = once(function() &#123; console.log(&apos;Fired!&apos;);&#125;); canOnlyFireOnce(); // &quot;Fired!&quot;canOnlyFireOnce(); // nothing 或者是123456789101112131415function test () &#123;console.log(&apos;test&apos;)&#125;var once = function (fn) &#123; var isFirst = true; return function () &#123; if (isFirst) &#123; isFirst = !isFirst; fn(); &#125; &#125;;&#125;;var b = once(test);b(); // &apos;test&apos;b(); // nothing 其实实现的原理还是通过闭包的形式 通过一个flag标志来记录是否被调用过， 有的话就标记为true 然后再置为false这样的。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[面试题：传入任意1-7的数组转为对应星期问题]]></title>
       <url>%2F2017%2F06%2F28%2F%E4%BC%A0%E5%85%A5%E4%BB%BB%E6%84%8F1-7%E7%9A%84%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E5%AF%B9%E5%BA%94%E6%98%9F%E6%9C%9F%E9%97%AE%E9%A2%98%2F</url>
       <content type="text"><![CDATA[已知一个1-7的数组 输出对应的星期如:输入 [1, 2, 3, 5, 6] —-&gt; 输出 星期1-星期3 星期5 星期6输入 [1, 2, 5, 6] —-&gt; 输出 星期1-星期2 星期5 星期5输入 [1, 2, 4, 5, 6, 7] —-&gt; 输出 星期1-星期2 星期5-星期6 星期7]]></content>
@@ -20,13 +34,6 @@
       <title><![CDATA[面试题：setTimeout 0 与 Promise的执行时机]]></title>
       <url>%2F2017%2F06%2F28%2FsetTimeout%200%20%E4%B8%8E%20Promise%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA%2F</url>
       <content type="text"><![CDATA[还没整理。。 等等]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[面试题：让javascript函数仅执行一次]]></title>
-      <url>%2F2017%2F06%2F28%2F%E8%AE%A9javascript%E5%87%BD%E6%95%B0%E4%BB%85%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%2F</url>
-      <content type="text"><![CDATA[题目是这样的：function a() {}a();a();多次调用的时候 只让它执行一次。 lodash.one 的实现 另一种实现1234567891011121314151617181920function once(fn, context) &#123; var result; return function() &#123; if(fn) &#123; result = fn.apply(context || this, arguments); fn = null; &#125; return result; &#125;;&#125; // Usagevar canOnlyFireOnce = once(function() &#123; console.log(&apos;Fired!&apos;);&#125;); canOnlyFireOnce(); // &quot;Fired!&quot;canOnlyFireOnce(); // nothing 或者是123456789101112131415function test () &#123;console.log(&apos;test&apos;)&#125;var once = function (fn) &#123; var isFirst = true; return function () &#123; if (isFirst) &#123; isFirst = !isFirst; fn(); &#125; &#125;;&#125;;var b = once(test);b(); // &apos;test&apos;b(); // nothing 其实实现的原理还是通过闭包的形式 通过一个flag标志来记录是否被调用过， 有的话就标记为true 然后再置为false这样的。]]></content>
     </entry>
 
     
