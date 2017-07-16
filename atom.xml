@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hyb628.github.io/"/>
-  <updated>2017-07-13T13:36:34.000Z</updated>
+  <updated>2017-07-16T02:45:41.000Z</updated>
   <id>https://hyb628.github.io/</id>
   
   <author>
@@ -14,6 +14,280 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人Mac软件工具整理</title>
+    <link href="https://hyb628.github.io/2017/07/15/macOS%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6/"/>
+    <id>https://hyb628.github.io/2017/07/15/macOS系统软件/</id>
+    <published>2017-07-15T13:11:05.000Z</published>
+    <updated>2017-07-16T02:45:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>收藏自己常用的macOS系统软件，觉得比较好的都慢慢记录下来。<a href="https://github.com/hyb628/macOS-App" target="_blank" rel="external">Github</a></p>
+</blockquote>
+<h3 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">软件名称</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">短网址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">网易MUMU</td>
+<td style="text-align:left">安卓模拟器</td>
+<td style="text-align:left"><a href="http://t.cn/RKp1aj2" target="_blank" rel="external">http://t.cn/RKp1aj2</a></td>
+</tr>
+<tr>
+<td style="text-align:left">TeamViewer</td>
+<td style="text-align:left">远程控制软件</td>
+<td style="text-align:left"><a href="http://t.cn/RMpQdjr" target="_blank" rel="external">http://t.cn/RMpQdjr</a></td>
+</tr>
+<tr>
+<td style="text-align:left">itsycal</td>
+<td style="text-align:left">Mac状态栏显示日历</td>
+<td style="text-align:left"><a href="http://u6.gg/uMfH" target="_blank" rel="external">http://u6.gg/uMfH</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Parallels Desktop</td>
+<td style="text-align:left">Mac 上运行 Windows</td>
+<td style="text-align:left"><a href="http://u6.gg/uMfY" target="_blank" rel="external">http://u6.gg/uMfY</a></td>
+</tr>
+<tr>
+<td style="text-align:left">SecureCRT</td>
+<td style="text-align:left">支持SSH的终端仿真程序</td>
+<td style="text-align:left"><a href="http://u6.gg/uMgh" target="_blank" rel="external">http://u6.gg/uMgh</a></td>
+</tr>
+<tr>
+<td style="text-align:left">LICEcap</td>
+<td style="text-align:left">Gif录制工具</td>
+<td style="text-align:left"><a href="http://u6.gg/uMgn" target="_blank" rel="external">http://u6.gg/uMgn</a></td>
+</tr>
+<tr>
+<td style="text-align:left">BCompareOSX</td>
+<td style="text-align:left">文件比对工具</td>
+<td style="text-align:left"><a href="http://u6.gg/uMgt" target="_blank" rel="external">http://u6.gg/uMgt</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Magnet</td>
+<td style="text-align:left">mac的快速分屏工具</td>
+<td style="text-align:left"><a href="http://t.cn/RKpgOoQ" target="_blank" rel="external">http://t.cn/RKpgOoQ</a></td>
+</tr>
+<tr>
+<td style="text-align:left">SwitchHost</td>
+<td style="text-align:left">切换host工具</td>
+<td style="text-align:left"><a href="http://t.cn/RKpgpZq" target="_blank" rel="external">http://t.cn/RKpgpZq</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Charles</td>
+<td style="text-align:left">抓包调试工具</td>
+<td style="text-align:left"><a href="http://t.cn/R5YA2F6" target="_blank" rel="external">http://t.cn/R5YA2F6</a></td>
+</tr>
+<tr>
+<td style="text-align:left">百度网盘Mac版</td>
+<td style="text-align:left">资料备份工具</td>
+<td style="text-align:left"><a href="http://t.cn/RKpePi2" target="_blank" rel="external">http://t.cn/RKpePi2</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Adobe CC 2017</td>
+<td style="text-align:left">全家桶</td>
+<td style="text-align:left"><a href="https://pan.baidu.com/s/1gfkpEkN" target="_blank" rel="external">https://pan.baidu.com/s/1gfkpEkN</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Chrome</td>
+<td style="text-align:left">浏览器</td>
+<td style="text-align:left"><a href="http://t.cn/RKNJLQ0" target="_blank" rel="external">http://t.cn/RKNJLQ0</a></td>
+</tr>
+<tr>
+<td style="text-align:left">VS Code</td>
+<td style="text-align:left">编辑器</td>
+<td style="text-align:left"><a href="http://t.cn/RAn2fkd" target="_blank" rel="external">http://t.cn/RAn2fkd</a></td>
+</tr>
+<tr>
+<td style="text-align:left">WebStorm</td>
+<td style="text-align:left">编辑器</td>
+<td style="text-align:left"><a href="http://t.cn/RK0h9xb" target="_blank" rel="external">http://t.cn/RK0h9xb</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Office</td>
+<td style="text-align:left">文档工具</td>
+<td style="text-align:left"><a href="https://pan.baidu.com/s/1hrO8Vy8" target="_blank" rel="external">https://pan.baidu.com/s/1hrO8Vy8</a> 密码: 6en9</td>
+</tr>
+<tr>
+<td style="text-align:left">印象笔记</td>
+<td style="text-align:left">印象笔记保存一切</td>
+<td style="text-align:left"><a href="https://www.yinxiang.com/" target="_blank" rel="external">https://www.yinxiang.com/</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="社交软件"><a href="#社交软件" class="headerlink" title="社交软件"></a>社交软件</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">软件名称</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">短网址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">twitter</td>
+<td style="text-align:left">Twitter for Mac</td>
+<td style="text-align:left"><a href="http://t.cn/zTSuTLr" target="_blank" rel="external">http://t.cn/zTSuTLr</a></td>
+</tr>
+<tr>
+<td style="text-align:left">TIM(QQ)</td>
+<td style="text-align:left">聊天工具</td>
+<td style="text-align:left"><a href="http://tim.qq.com/" target="_blank" rel="external">http://tim.qq.com/</a></td>
+</tr>
+<tr>
+<td style="text-align:left">WeChat</td>
+<td style="text-align:left">聊天工具</td>
+<td style="text-align:left"><a href="https://mac.weixin.qq.com/" target="_blank" rel="external">https://mac.weixin.qq.com/</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Line</td>
+<td style="text-align:left">第一次注册 国内手机禁止注册，可用Line的Chrome应用注册，在soft登录，[用美国的appleid下载才行]</td>
+<td style="text-align:left"><a href="http://t.cn/RUj3MfI" target="_blank" rel="external">http://t.cn/RUj3MfI</a>  <a href="http://t.cn/RKpFmnz" target="_blank" rel="external">http://t.cn/RKpFmnz</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Chrome插件"><a href="#Chrome插件" class="headerlink" title="Chrome插件"></a>Chrome插件</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">软件名称</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">短网址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Infinity新标签页</td>
+<td style="text-align:left">自由定制chrome新标签</td>
+<td style="text-align:left"><a href="http://t.cn/RcUOryJ" target="_blank" rel="external">http://t.cn/RcUOryJ</a></td>
+</tr>
+<tr>
+<td style="text-align:left">印象笔记·剪藏</td>
+<td style="text-align:left">一键保存精彩网页内容到印象笔记帐户</td>
+<td style="text-align:left"><a href="http://dwz.cn/6ildiH" target="_blank" rel="external">http://dwz.cn/6ildiH</a></td>
+</tr>
+<tr>
+<td style="text-align:left">二维码网址</td>
+<td style="text-align:left">生成网页的二维码</td>
+<td style="text-align:left"><a href="http://dwz.cn/6ileiW" target="_blank" rel="external">http://dwz.cn/6ileiW</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Google翻译</td>
+<td style="text-align:left">网页翻译、划词翻译</td>
+<td style="text-align:left"><a href="http://t.cn/zHRHHM8" target="_blank" rel="external">http://t.cn/zHRHHM8</a></td>
+</tr>
+<tr>
+<td style="text-align:left">OneTab</td>
+<td style="text-align:left">将所有标签页转换成一个列表</td>
+<td style="text-align:left"><a href="http://t.cn/zY3QgHn" target="_blank" rel="external">http://t.cn/zY3QgHn</a></td>
+</tr>
+<tr>
+<td style="text-align:left">animate-playerbox</td>
+<td style="text-align:left">快速查看animate.css对应的css动画代码</td>
+<td style="text-align:left"><a href="http://t.cn/RKpkiNQ" target="_blank" rel="external">http://t.cn/RKpkiNQ</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Gmail™</td>
+<td style="text-align:left">查看Gmail邮箱</td>
+<td style="text-align:left"><a href="http://t.cn/zllaGOB" target="_blank" rel="external">http://t.cn/zllaGOB</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Octotree</td>
+<td style="text-align:left">Tree形式查看Github页面的代码</td>
+<td style="text-align:left"><a href="http://t.cn/RvPpw3W" target="_blank" rel="external">http://t.cn/RvPpw3W</a></td>
+</tr>
+<tr>
+<td style="text-align:left">ClearCache</td>
+<td style="text-align:left">一键清除所有浏览器记录</td>
+<td style="text-align:left"><a href="http://t.cn/zQffwwV" target="_blank" rel="external">http://t.cn/zQffwwV</a></td>
+</tr>
+<tr>
+<td style="text-align:left">youtube-adblocker-block-v</td>
+<td style="text-align:left">跳过YouTube广告</td>
+<td style="text-align:left"><a href="http://t.cn/RKpFyI6" target="_blank" rel="external">http://t.cn/RKpFyI6</a></td>
+</tr>
+<tr>
+<td style="text-align:left">web-page-photo</td>
+<td style="text-align:left">网页生成长图插件</td>
+<td style="text-align:left"><a href="http://t.cn/RKpstDq" target="_blank" rel="external">http://t.cn/RKpstDq</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="翻墙软件"><a href="#翻墙软件" class="headerlink" title="翻墙软件"></a>翻墙软件</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">软件名称</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">短网址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ShadowSocks</td>
+<td style="text-align:left">比较稳定的VPN,$15.95USD</td>
+<td style="text-align:left"><a href="http://t.cn/RXxhUvP" target="_blank" rel="external">http://t.cn/RXxhUvP</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Wingy</td>
+<td style="text-align:left">IOS系统手机翻墙 个人在用，用ShadowSocks账号</td>
+<td style="text-align:left"><a href="http://t.cn/Roz9jaW" target="_blank" rel="external">http://t.cn/Roz9jaW</a></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;收藏自己常用的macOS系统软件，觉得比较好的都慢慢记录下来。&lt;a href=&quot;https://github.com/hyb628/macOS-App&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;
+    
+    </summary>
+    
+      <category term="工具" scheme="https://hyb628.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="mac" scheme="https://hyb628.github.io/tags/mac/"/>
+    
+      <category term="工具" scheme="https://hyb628.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="软件" scheme="https://hyb628.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题：传入任意1-7的数组转为对应星期问题</title>
+    <link href="https://hyb628.github.io/2017/06/28/%E4%BC%A0%E5%85%A5%E4%BB%BB%E6%84%8F1-7%E7%9A%84%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E5%AF%B9%E5%BA%94%E6%98%9F%E6%9C%9F%E9%97%AE%E9%A2%98/"/>
+    <id>https://hyb628.github.io/2017/06/28/传入任意1-7的数组转为对应星期问题/</id>
+    <published>2017-06-28T01:55:08.000Z</published>
+    <updated>2017-07-06T02:39:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>已知一个1-7的数组 输出对应的星期<br>如:<br>输入 [1, 2, 3, 5, 6]  —-&gt; 输出 星期1-星期3  星期5  星期6<br>输入 [1, 2, 5, 6]  —-&gt; 输出 星期1-星期2  星期5  星期5<br>输入 [1, 2, 4, 5, 6, 7]  —-&gt; 输出 星期1-星期2  星期5-星期6  星期7</p>
+</blockquote>
+<script async src="//jsfiddle.net/hyb628/tm4e233f/embed/js,html,result/"></script>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;已知一个1-7的数组 输出对应的星期&lt;br&gt;如:&lt;br&gt;输入 [1, 2, 3, 5, 6]  —-&amp;gt; 输出 星期1-星期3  星期5  星期6&lt;br&gt;输入 [1, 2, 5, 6]  —-&amp;gt; 输出 星期1-星期2  星期5  星期5&lt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="面试题" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="https://hyb628.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>面试题：setTimeout 0 与 Promise的执行时机</title>
@@ -68,35 +342,6 @@
 &lt;p&gt;题目是这样的：&lt;br&gt;function a() {}&lt;br&gt;a();&lt;br&gt;a();&lt;br&gt;多次调用的时候 只让它执行一次。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h6 id=&quot;lodash-one-的实现&quot;&gt;&lt;a href=&quot;#lodash-on
-    
-    </summary>
-    
-      <category term="前端" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="面试题" scheme="https://hyb628.github.io/categories/%E5%89%8D%E7%AB%AF/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试题" scheme="https://hyb628.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试题：传入任意1-7的数组转为对应星期问题</title>
-    <link href="https://hyb628.github.io/2017/06/28/%E4%BC%A0%E5%85%A5%E4%BB%BB%E6%84%8F1-7%E7%9A%84%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E5%AF%B9%E5%BA%94%E6%98%9F%E6%9C%9F%E9%97%AE%E9%A2%98/"/>
-    <id>https://hyb628.github.io/2017/06/28/传入任意1-7的数组转为对应星期问题/</id>
-    <published>2017-06-28T01:55:08.000Z</published>
-    <updated>2017-07-06T02:39:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>已知一个1-7的数组 输出对应的星期<br>如:<br>输入 [1, 2, 3, 5, 6]  —-&gt; 输出 星期1-星期3  星期5  星期6<br>输入 [1, 2, 5, 6]  —-&gt; 输出 星期1-星期2  星期5  星期5<br>输入 [1, 2, 4, 5, 6, 7]  —-&gt; 输出 星期1-星期2  星期5-星期6  星期7</p>
-</blockquote>
-<script async src="//jsfiddle.net/hyb628/tm4e233f/embed/js,html,result/"></script>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;已知一个1-7的数组 输出对应的星期&lt;br&gt;如:&lt;br&gt;输入 [1, 2, 3, 5, 6]  —-&amp;gt; 输出 星期1-星期3  星期5  星期6&lt;br&gt;输入 [1, 2, 5, 6]  —-&amp;gt; 输出 星期1-星期2  星期5  星期5&lt;
     
     </summary>
     
@@ -250,52 +495,6 @@
   </entry>
   
   <entry>
-    <title>求负数的二进制</title>
-    <link href="https://hyb628.github.io/2016/09/03/%E8%B4%9F%E6%95%B0%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
-    <id>https://hyb628.github.io/2016/09/03/负数的二进制/</id>
-    <published>2016-09-03T06:26:24.000Z</published>
-    <updated>2017-06-02T17:03:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>[转]</p>
-<p>负数用二进制表达。比如，假设有一 int 类型的数，值为5，那么，我们知道它在计算机中表示为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">00000000 00000000 00000000 00000101</div></pre></td></tr></table></figure></p>
-<p>5转换成二制是101，不过int类型的数占用4字节（32位），所以前面填了一堆0。<br>现在想知道，-5在计算机中如何表示？</p>
-<blockquote>
-<p>在计算机中，负数以其正值的补码形式表达。</p>
-</blockquote>
-<p>什么叫补码呢？这得从原码，反码说起。</p>
-<blockquote>
-<p>原码：一个整数，按照绝对值大小转换成的二进制数，称为原码。</p>
-</blockquote>
-<p>比如 <code>00000000 00000000 00000000 00000101</code> 是 5的 原码。<br>反码：将二进制数按位取反，所得的新二进制数称为原二进制数的反码。<br>取反操作指：原为1，得0；原为0，得1。（1变0; 0变1）<br>比如：将<code>00000000 00000000 00000000 00000101</code>每一位取反，得<code>11111111 11111111 11111111 11111010</code>。</p>
-<p>称：<code>11111111 11111111 11111111 11111010</code> 是 <code>00000000 00000000 00000000 00000101</code> 的反码。</p>
-<p>反码是相互的，所以也可称：</p>
-<p><code>11111111 11111111 11111111 11111010</code> 和 <code>00000000 00000000 00000000 00000101</code> 互为反码。
-　</p>
-<blockquote>
-<p>补码：反码加1称为补码。</p>
-</blockquote>
-<p>也就是说，要得到一个数的补码，先得到反码，然后将反码加上1，所得数称为补码。<br>比如：<code>00000000 00000000 00000000 00000101</code> 的反码是：<code>11111111 11111111 11111111 11111010</code>。<br>那么，补码为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11111111 11111111 11111111 11111010 + 1 = 11111111 11111111 11111111 11111011</div></pre></td></tr></table></figure>
-<p>所以，-5 在计算机中表达为：<code>11111111 11111111 11111111 11111011</code>。转换为十六进制：<code>0xFFFFFFFB</code>。<br>再举一例，我们来看整数-1在计算机中如何表示。<br>假设这也是一个int类型，那么：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1、先取1的原码： 00000000 00000000 00000000 00000001</div><div class="line">2、得反码：     11111111 11111111 11111111 11111110</div><div class="line">3、得补码：     11111111 11111111 11111111 11111111</div></pre></td></tr></table></figure>
-<p>可见，－1在计算机里用二进制表达就是全1。16进制为：0xFFFFFF</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;[转]&lt;/p&gt;
-&lt;p&gt;负数用二进制表达。比如，假设有一 int 类型的数，值为5，那么，我们知道它在计算机中表示为：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div cla
-    
-    </summary>
-    
-      <category term="计算机基础" scheme="https://hyb628.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="二进制" scheme="https://hyb628.github.io/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
-    
-  </entry>
-  
-  <entry>
     <title>阶段性技术啰嗦（二）</title>
     <link href="https://hyb628.github.io/2016/09/03/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%8A%80%E6%9C%AF%E5%95%B0%E5%97%A62/"/>
     <id>https://hyb628.github.io/2016/09/03/阶段性技术啰嗦2/</id>
@@ -345,6 +544,52 @@
       <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
     
       <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>求负数的二进制</title>
+    <link href="https://hyb628.github.io/2016/09/03/%E8%B4%9F%E6%95%B0%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
+    <id>https://hyb628.github.io/2016/09/03/负数的二进制/</id>
+    <published>2016-09-03T06:26:24.000Z</published>
+    <updated>2017-06-02T17:03:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[转]</p>
+<p>负数用二进制表达。比如，假设有一 int 类型的数，值为5，那么，我们知道它在计算机中表示为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">00000000 00000000 00000000 00000101</div></pre></td></tr></table></figure></p>
+<p>5转换成二制是101，不过int类型的数占用4字节（32位），所以前面填了一堆0。<br>现在想知道，-5在计算机中如何表示？</p>
+<blockquote>
+<p>在计算机中，负数以其正值的补码形式表达。</p>
+</blockquote>
+<p>什么叫补码呢？这得从原码，反码说起。</p>
+<blockquote>
+<p>原码：一个整数，按照绝对值大小转换成的二进制数，称为原码。</p>
+</blockquote>
+<p>比如 <code>00000000 00000000 00000000 00000101</code> 是 5的 原码。<br>反码：将二进制数按位取反，所得的新二进制数称为原二进制数的反码。<br>取反操作指：原为1，得0；原为0，得1。（1变0; 0变1）<br>比如：将<code>00000000 00000000 00000000 00000101</code>每一位取反，得<code>11111111 11111111 11111111 11111010</code>。</p>
+<p>称：<code>11111111 11111111 11111111 11111010</code> 是 <code>00000000 00000000 00000000 00000101</code> 的反码。</p>
+<p>反码是相互的，所以也可称：</p>
+<p><code>11111111 11111111 11111111 11111010</code> 和 <code>00000000 00000000 00000000 00000101</code> 互为反码。
+　</p>
+<blockquote>
+<p>补码：反码加1称为补码。</p>
+</blockquote>
+<p>也就是说，要得到一个数的补码，先得到反码，然后将反码加上1，所得数称为补码。<br>比如：<code>00000000 00000000 00000000 00000101</code> 的反码是：<code>11111111 11111111 11111111 11111010</code>。<br>那么，补码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11111111 11111111 11111111 11111010 + 1 = 11111111 11111111 11111111 11111011</div></pre></td></tr></table></figure>
+<p>所以，-5 在计算机中表达为：<code>11111111 11111111 11111111 11111011</code>。转换为十六进制：<code>0xFFFFFFFB</code>。<br>再举一例，我们来看整数-1在计算机中如何表示。<br>假设这也是一个int类型，那么：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1、先取1的原码： 00000000 00000000 00000000 00000001</div><div class="line">2、得反码：     11111111 11111111 11111111 11111110</div><div class="line">3、得补码：     11111111 11111111 11111111 11111111</div></pre></td></tr></table></figure>
+<p>可见，－1在计算机里用二进制表达就是全1。16进制为：0xFFFFFF</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;[转]&lt;/p&gt;
+&lt;p&gt;负数用二进制表达。比如，假设有一 int 类型的数，值为5，那么，我们知道它在计算机中表示为：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div cla
+    
+    </summary>
+    
+      <category term="计算机基础" scheme="https://hyb628.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="二进制" scheme="https://hyb628.github.io/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
     
   </entry>
   
@@ -892,39 +1137,6 @@
       <category term="JSX" scheme="https://hyb628.github.io/tags/JSX/"/>
     
       <category term="React" scheme="https://hyb628.github.io/tags/React/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>古水北镇</title>
-    <link href="https://hyb628.github.io/2016/05/18/20160518%E5%8F%A4%E6%B0%B4%E5%8C%97%E9%95%87/"/>
-    <id>https://hyb628.github.io/2016/05/18/20160518古水北镇/</id>
-    <published>2016-05-18T13:20:21.000Z</published>
-    <updated>2017-04-29T13:28:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>快20天没唠叨了，本想今晚睡前说点啥或者写个技术总结啥的，但是无奈快要感冒似的 （估计刚抽完烟自我感觉有关系），下次再说来这里写吧。听首歌再去睡觉。</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=35470197&auto=1&height=66"></iframe>
-
-<p>周末部门间要团建，所以到时候估计就有照片又可以更新了，昨天在Mac上面安装AE，打开速度很快的我快眼瞎了，所以就打算周末要是有好的照片啥的或者 周末回来弄个AE 刚好可以试试电脑渲速度。</p>
-<p>[2016.5 更新]</p>
-<p>古水北镇 &amp; 长城 浪去了~~</p>
-<p><img src="/images/20160518/1.jpg" alt=""></p>
-<p><img src="/images/20160518/2.jpg" alt=""></p>
-<iframe src="http://yuntv.letv.com/bcloud.html?uu=n69ejaickb&amp;vu=e18839e26b&amp;auto_play=0&amp;gpcflag=1&amp;width=640&amp;height=360" width="100%" height="380" frameborder="0" marginwidth="0" marginheight="0"></iframe>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;快20天没唠叨了，本想今晚睡前说点啥或者写个技术总结啥的，但是无奈快要感冒似的 （估计刚抽完烟自我感觉有关系），下次再说来这里写吧。听首歌再去睡觉。&lt;/p&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; margin
-    
-    </summary>
-    
-      <category term="生活" scheme="https://hyb628.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="随笔" scheme="https://hyb628.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="生活" scheme="https://hyb628.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
